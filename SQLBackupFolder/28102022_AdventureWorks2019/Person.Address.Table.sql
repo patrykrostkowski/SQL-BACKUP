@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[Address]    Script Date: 28.10.2022 13:28:07 ******/
+/****** Object:  Table [Person].[Address]    Script Date: 28.10.2022 13:33:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,7 +21,7 @@ CREATE TABLE [Person].[Address](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Address_rowguid]    Script Date: 28.10.2022 13:28:08 ******/
+/****** Object:  Index [AK_Address_rowguid]    Script Date: 28.10.2022 13:33:47 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Address_rowguid] ON [Person].[Address]
 (
 	[rowguid] ASC
@@ -29,7 +29,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Address_rowguid] ON [Person].[Address]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode]    Script Date: 28.10.2022 13:28:08 ******/
+/****** Object:  Index [IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode]    Script Date: 28.10.2022 13:33:47 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode] ON [Person].[Address]
 (
 	[AddressLine1] ASC,
@@ -39,7 +39,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [IX_Address_AddressLine1_AddressLine2_City_Stat
 	[PostalCode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Address_StateProvinceID]    Script Date: 28.10.2022 13:28:08 ******/
+/****** Object:  Index [IX_Address_StateProvinceID]    Script Date: 28.10.2022 13:33:47 ******/
 CREATE NONCLUSTERED INDEX [IX_Address_StateProvinceID] ON [Person].[Address]
 (
 	[StateProvinceID] ASC

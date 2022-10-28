@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[AddressType]    Script Date: 28.10.2022 13:28:07 ******/
+/****** Object:  Table [Person].[AddressType]    Script Date: 28.10.2022 13:33:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18,13 +18,13 @@ CREATE TABLE [Person].[AddressType](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_AddressType_Name]    Script Date: 28.10.2022 13:28:08 ******/
+/****** Object:  Index [AK_AddressType_Name]    Script Date: 28.10.2022 13:33:47 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_AddressType_Name] ON [Person].[AddressType]
 (
 	[Name] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_AddressType_rowguid]    Script Date: 28.10.2022 13:28:08 ******/
+/****** Object:  Index [AK_AddressType_rowguid]    Script Date: 28.10.2022 13:33:47 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_AddressType_rowguid] ON [Person].[AddressType]
 (
 	[rowguid] ASC
