@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[ProductDescription]    Script Date: 29.10.2022 10:42:14 ******/
+/****** Object:  Table [Production].[ProductDescription]    Script Date: 29.10.2022 10:44:37 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16,7 +16,7 @@ CREATE TABLE [Production].[ProductDescription](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_ProductDescription_rowguid]    Script Date: 29.10.2022 10:42:14 ******/
+/****** Object:  Index [AK_ProductDescription_rowguid]    Script Date: 29.10.2022 10:44:37 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_ProductDescription_rowguid] ON [Production].[ProductDescription]
 (
 	[rowguid] ASC
