@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[EmployeeDepartmentHistory]    Script Date: 29.10.2022 12:10:33 ******/
+/****** Object:  Table [HumanResources].[EmployeeDepartmentHistory]    Script Date: 29.10.2022 12:19:33 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,13 +21,13 @@ CREATE TABLE [HumanResources].[EmployeeDepartmentHistory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_EmployeeDepartmentHistory_DepartmentID]    Script Date: 29.10.2022 12:10:34 ******/
+/****** Object:  Index [IX_EmployeeDepartmentHistory_DepartmentID]    Script Date: 29.10.2022 12:19:34 ******/
 CREATE NONCLUSTERED INDEX [IX_EmployeeDepartmentHistory_DepartmentID] ON [HumanResources].[EmployeeDepartmentHistory]
 (
 	[DepartmentID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_EmployeeDepartmentHistory_ShiftID]    Script Date: 29.10.2022 12:10:34 ******/
+/****** Object:  Index [IX_EmployeeDepartmentHistory_ShiftID]    Script Date: 29.10.2022 12:19:34 ******/
 CREATE NONCLUSTERED INDEX [IX_EmployeeDepartmentHistory_ShiftID] ON [HumanResources].[EmployeeDepartmentHistory]
 (
 	[ShiftID] ASC
