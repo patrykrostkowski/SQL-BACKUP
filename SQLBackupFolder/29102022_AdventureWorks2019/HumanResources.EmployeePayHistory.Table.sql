@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[EmployeePayHistory]    Script Date: 29.10.2022 11:35:06 ******/
+/****** Object:  Table [HumanResources].[EmployeePayHistory]    Script Date: 29.10.2022 12:10:33 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
