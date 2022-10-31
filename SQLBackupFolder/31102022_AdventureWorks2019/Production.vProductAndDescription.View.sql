@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  View [Production].[vProductAndDescription]    Script Date: 31.10.2022 12:24:51 ******/
+/****** Object:  View [Production].[vProductAndDescription]    Script Date: 31.10.2022 12:30:39 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -32,7 +32,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [IX_vProductAndDescription]    Script Date: 31.10.2022 12:24:51 ******/
+/****** Object:  Index [IX_vProductAndDescription]    Script Date: 31.10.2022 12:30:39 ******/
 CREATE UNIQUE CLUSTERED INDEX [IX_vProductAndDescription] ON [Production].[vProductAndDescription]
 (
 	[CultureID] ASC,
