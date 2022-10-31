@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[OrdersAboveThreshold]    Script Date: 31.10.2022 12:30:39 ******/
+/****** Object:  StoredProcedure [dbo].[OrdersAboveThreshold]    Script Date: 31.10.2022 12:40:33 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
