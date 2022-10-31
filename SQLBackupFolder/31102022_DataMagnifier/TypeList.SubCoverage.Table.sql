@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[SubCoverage]    Script Date: 31.10.2022 11:42:57 ******/
+/****** Object:  Table [TypeList].[SubCoverage]    Script Date: 31.10.2022 11:54:58 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

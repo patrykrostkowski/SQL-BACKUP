@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [PreBind].[QuoteVehicleSafetyFeature]    Script Date: 31.10.2022 11:42:55 ******/
+/****** Object:  Table [PreBind].[QuoteVehicleSafetyFeature]    Script Date: 31.10.2022 11:54:57 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
