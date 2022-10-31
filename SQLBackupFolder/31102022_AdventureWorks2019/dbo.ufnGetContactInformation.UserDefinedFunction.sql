@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  UserDefinedFunction [dbo].[ufnGetContactInformation]    Script Date: 31.10.2022 11:42:36 ******/
+/****** Object:  UserDefinedFunction [dbo].[ufnGetContactInformation]    Script Date: 31.10.2022 11:54:26 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

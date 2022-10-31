@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SpecialOffer]    Script Date: 31.10.2022 11:42:37 ******/
+/****** Object:  Table [Sales].[SpecialOffer]    Script Date: 31.10.2022 11:54:27 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -23,7 +23,7 @@ CREATE TABLE [Sales].[SpecialOffer](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_SpecialOffer_rowguid]    Script Date: 31.10.2022 11:42:37 ******/
+/****** Object:  Index [AK_SpecialOffer_rowguid]    Script Date: 31.10.2022 11:54:27 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SpecialOffer_rowguid] ON [Sales].[SpecialOffer]
 (
 	[rowguid] ASC
