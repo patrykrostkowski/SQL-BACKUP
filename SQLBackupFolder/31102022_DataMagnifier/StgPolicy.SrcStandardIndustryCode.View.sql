@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  View [StgPolicy].[SrcStandardIndustryCode]    Script Date: 31.10.2022 12:06:57 ******/
+/****** Object:  View [StgPolicy].[SrcStandardIndustryCode]    Script Date: 31.10.2022 12:07:08 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
