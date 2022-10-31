@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[UnderwritingStatus]    Script Date: 31.10.2022 12:40:47 ******/
+/****** Object:  Table [TypeList].[UnderwritingStatus]    Script Date: 31.10.2022 13:29:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
