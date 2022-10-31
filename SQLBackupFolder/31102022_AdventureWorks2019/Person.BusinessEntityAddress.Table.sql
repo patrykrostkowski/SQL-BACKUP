@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[BusinessEntityAddress]    Script Date: 31.10.2022 12:07:56 ******/
+/****** Object:  Table [Person].[BusinessEntityAddress]    Script Date: 31.10.2022 12:24:50 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,19 +19,19 @@ CREATE TABLE [Person].[BusinessEntityAddress](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_BusinessEntityAddress_rowguid]    Script Date: 31.10.2022 12:07:57 ******/
+/****** Object:  Index [AK_BusinessEntityAddress_rowguid]    Script Date: 31.10.2022 12:24:51 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_BusinessEntityAddress_rowguid] ON [Person].[BusinessEntityAddress]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BusinessEntityAddress_AddressID]    Script Date: 31.10.2022 12:07:57 ******/
+/****** Object:  Index [IX_BusinessEntityAddress_AddressID]    Script Date: 31.10.2022 12:24:51 ******/
 CREATE NONCLUSTERED INDEX [IX_BusinessEntityAddress_AddressID] ON [Person].[BusinessEntityAddress]
 (
 	[AddressID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BusinessEntityAddress_AddressTypeID]    Script Date: 31.10.2022 12:07:57 ******/
+/****** Object:  Index [IX_BusinessEntityAddress_AddressTypeID]    Script Date: 31.10.2022 12:24:51 ******/
 CREATE NONCLUSTERED INDEX [IX_BusinessEntityAddress_AddressTypeID] ON [Person].[BusinessEntityAddress]
 (
 	[AddressTypeID] ASC
