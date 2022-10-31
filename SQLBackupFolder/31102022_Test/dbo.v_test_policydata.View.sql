@@ -1,6 +1,6 @@
 ﻿USE [Test]
 GO
-/****** Object:  View [dbo].[v_test_policydata]    Script Date: 31.10.2022 12:41:03 ******/
+/****** Object:  View [dbo].[v_test_policydata]    Script Date: 31.10.2022 13:29:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
