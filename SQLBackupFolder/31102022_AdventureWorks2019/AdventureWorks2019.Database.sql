@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [AdventureWorks2019]    Script Date: 31.10.2022 12:03:03 ******/
+/****** Object:  Database [AdventureWorks2019]    Script Date: 31.10.2022 12:06:43 ******/
 CREATE DATABASE [AdventureWorks2019]
  CONTAINMENT = NONE
  ON  PRIMARY 
