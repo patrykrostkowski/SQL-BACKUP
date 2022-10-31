@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[LeadExcessQuota]    Script Date: 31.10.2022 12:09:05 ******/
+/****** Object:  Table [TypeList].[LeadExcessQuota]    Script Date: 31.10.2022 12:25:06 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
