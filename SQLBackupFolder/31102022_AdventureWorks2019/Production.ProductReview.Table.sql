@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[ProductReview]    Script Date: 31.10.2022 12:40:32 ******/
+/****** Object:  Table [Production].[ProductReview]    Script Date: 31.10.2022 13:29:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,7 +22,7 @@ CREATE TABLE [Production].[ProductReview](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_ProductReview_ProductID_Name]    Script Date: 31.10.2022 12:40:32 ******/
+/****** Object:  Index [IX_ProductReview_ProductID_Name]    Script Date: 31.10.2022 13:29:02 ******/
 CREATE NONCLUSTERED INDEX [IX_ProductReview_ProductID_Name] ON [Production].[ProductReview]
 (
 	[ProductID] ASC,
@@ -30,7 +30,7 @@ CREATE NONCLUSTERED INDEX [IX_ProductReview_ProductID_Name] ON [Production].[Pro
 )
 INCLUDE ( 	[Comments]) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  FullTextIndex     Script Date: 31.10.2022 12:40:33 ******/
+/****** Object:  FullTextIndex     Script Date: 31.10.2022 13:29:02 ******/
 CREATE FULLTEXT INDEX ON [Production].[ProductReview]
 KEY INDEX [PK_ProductReview_ProductReviewID]ON ([AW2016FullTextCatalog], FILEGROUP [PRIMARY])
 WITH (CHANGE_TRACKING = AUTO, STOPLIST = SYSTEM)

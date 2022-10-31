@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[Currency]    Script Date: 31.10.2022 12:40:32 ******/
+/****** Object:  Table [Sales].[Currency]    Script Date: 31.10.2022 13:29:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17,7 +17,7 @@ CREATE TABLE [Sales].[Currency](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Currency_Name]    Script Date: 31.10.2022 12:40:32 ******/
+/****** Object:  Index [AK_Currency_Name]    Script Date: 31.10.2022 13:29:02 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Currency_Name] ON [Sales].[Currency]
 (
 	[Name] ASC
