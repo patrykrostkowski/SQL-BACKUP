@@ -1,6 +1,6 @@
 ﻿USE [CustomerWarehouse]
 GO
-/****** Object:  Table [dbo].[dimStates]    Script Date: 31.10.2022 12:30:45 ******/
+/****** Object:  Table [dbo].[dimStates]    Script Date: 31.10.2022 12:40:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
