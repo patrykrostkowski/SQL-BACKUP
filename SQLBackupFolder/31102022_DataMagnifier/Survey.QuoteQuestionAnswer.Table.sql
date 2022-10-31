@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Survey].[QuoteQuestionAnswer]    Script Date: 31.10.2022 12:31:15 ******/
+/****** Object:  Table [Survey].[QuoteQuestionAnswer]    Script Date: 31.10.2022 12:40:46 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Claim].[LossEventVehicle]    Script Date: 31.10.2022 12:31:13 ******/
+/****** Object:  Table [Claim].[LossEventVehicle]    Script Date: 31.10.2022 12:40:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
