@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[LossOccurrenceType]    Script Date: 31.10.2022 12:25:06 ******/
+/****** Object:  Table [TypeList].[LossOccurrenceType]    Script Date: 31.10.2022 12:30:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
