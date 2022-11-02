@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  UserDefinedFunction [dbo].[ufnIntegerPercent]    Script Date: 02.11.2022 13:40:29 ******/
+/****** Object:  UserDefinedFunction [dbo].[ufnIntegerPercent]    Script Date: 02.11.2022 13:42:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

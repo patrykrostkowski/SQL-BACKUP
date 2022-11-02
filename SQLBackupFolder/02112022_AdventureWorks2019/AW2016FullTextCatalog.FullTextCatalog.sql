@@ -1,5 +1,5 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  FullTextCatalog [AW2016FullTextCatalog]    Script Date: 02.11.2022 13:40:29 ******/
+/****** Object:  FullTextCatalog [AW2016FullTextCatalog]    Script Date: 02.11.2022 13:42:36 ******/
 CREATE FULLTEXT CATALOG [AW2016FullTextCatalog] AS DEFAULT
 GO
