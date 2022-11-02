@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[BillOfMaterials]    Script Date: 02.11.2022 13:42:36 ******/
+/****** Object:  Table [Production].[BillOfMaterials]    Script Date: 02.11.2022 13:43:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,7 +21,7 @@ CREATE TABLE [Production].[BillOfMaterials](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate]    Script Date: 02.11.2022 13:42:36 ******/
+/****** Object:  Index [AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate]    Script Date: 02.11.2022 13:43:13 ******/
 CREATE UNIQUE CLUSTERED INDEX [AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate] ON [Production].[BillOfMaterials]
 (
 	[ProductAssemblyID] ASC,
@@ -31,7 +31,7 @@ CREATE UNIQUE CLUSTERED INDEX [AK_BillOfMaterials_ProductAssemblyID_ComponentID_
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_BillOfMaterials_UnitMeasureCode]    Script Date: 02.11.2022 13:42:36 ******/
+/****** Object:  Index [IX_BillOfMaterials_UnitMeasureCode]    Script Date: 02.11.2022 13:43:14 ******/
 CREATE NONCLUSTERED INDEX [IX_BillOfMaterials_UnitMeasureCode] ON [Production].[BillOfMaterials]
 (
 	[UnitMeasureCode] ASC
