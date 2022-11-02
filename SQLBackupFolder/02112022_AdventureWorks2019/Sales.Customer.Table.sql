@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[Customer]    Script Date: 02.11.2022 13:58:58 ******/
+/****** Object:  Table [Sales].[Customer]    Script Date: 02.11.2022 14:04:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -27,19 +27,19 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [AK_Customer_AccountNumber]    Script Date: 02.11.2022 13:58:58 ******/
+/****** Object:  Index [AK_Customer_AccountNumber]    Script Date: 02.11.2022 14:04:54 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Customer_AccountNumber] ON [Sales].[Customer]
 (
 	[AccountNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Customer_rowguid]    Script Date: 02.11.2022 13:58:58 ******/
+/****** Object:  Index [AK_Customer_rowguid]    Script Date: 02.11.2022 14:04:54 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Customer_rowguid] ON [Sales].[Customer]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Customer_TerritoryID]    Script Date: 02.11.2022 13:58:58 ******/
+/****** Object:  Index [IX_Customer_TerritoryID]    Script Date: 02.11.2022 14:04:54 ******/
 CREATE NONCLUSTERED INDEX [IX_Customer_TerritoryID] ON [Sales].[Customer]
 (
 	[TerritoryID] ASC
