@@ -1,5 +1,5 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Schema [Config]    Script Date: 02.11.2022 13:21:56 ******/
+/****** Object:  Schema [Config]    Script Date: 02.11.2022 13:23:31 ******/
 CREATE SCHEMA [Config]
 GO
