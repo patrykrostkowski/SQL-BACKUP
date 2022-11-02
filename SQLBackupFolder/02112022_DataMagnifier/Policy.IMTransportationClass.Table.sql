@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Policy].[IMTransportationClass]    Script Date: 02.11.2022 13:09:43 ******/
+/****** Object:  Table [Policy].[IMTransportationClass]    Script Date: 02.11.2022 13:21:57 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
