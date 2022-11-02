@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[Shift]    Script Date: 02.11.2022 13:01:45 ******/
+/****** Object:  Table [HumanResources].[Shift]    Script Date: 02.11.2022 13:09:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,13 +19,13 @@ CREATE TABLE [HumanResources].[Shift](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Shift_Name]    Script Date: 02.11.2022 13:01:45 ******/
+/****** Object:  Index [AK_Shift_Name]    Script Date: 02.11.2022 13:09:24 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Shift_Name] ON [HumanResources].[Shift]
 (
 	[Name] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Shift_StartTime_EndTime]    Script Date: 02.11.2022 13:01:45 ******/
+/****** Object:  Index [AK_Shift_StartTime_EndTime]    Script Date: 02.11.2022 13:09:24 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Shift_StartTime_EndTime] ON [HumanResources].[Shift]
 (
 	[StartTime] ASC,
