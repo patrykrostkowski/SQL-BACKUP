@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Finance].[EarnedPremiumHeader]    Script Date: 02.11.2022 09:13:29 ******/
+/****** Object:  Table [Finance].[EarnedPremiumHeader]    Script Date: 02.11.2022 09:21:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
