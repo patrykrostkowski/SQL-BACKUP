@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[ProductCostHistory]    Script Date: 02.11.2022 13:33:40 ******/
+/****** Object:  Table [Production].[ProductCostHistory]    Script Date: 02.11.2022 13:35:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
