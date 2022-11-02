@@ -1,5 +1,5 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Schema [StgPolicy]    Script Date: 02.11.2022 14:07:30 ******/
+/****** Object:  Schema [StgPolicy]    Script Date: 02.11.2022 14:11:19 ******/
 CREATE SCHEMA [StgPolicy]
 GO
