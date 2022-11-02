@@ -1,6 +1,6 @@
 ﻿USE [Test]
 GO
-/****** Object:  Table [dbo].[output_table_new]    Script Date: 02.11.2022 12:54:19 ******/
+/****** Object:  Table [dbo].[output_table_new]    Script Date: 02.11.2022 12:56:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
