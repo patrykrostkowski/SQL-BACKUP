@@ -1,6 +1,6 @@
 ﻿USE [Test]
 GO
-/****** Object:  Table [dbo].[tblBushTuckerItem]    Script Date: 02.11.2022 09:09:14 ******/
+/****** Object:  Table [dbo].[tblBushTuckerItem]    Script Date: 02.11.2022 09:10:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
