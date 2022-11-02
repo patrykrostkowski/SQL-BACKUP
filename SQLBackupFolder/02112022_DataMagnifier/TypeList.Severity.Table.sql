@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[Severity]    Script Date: 02.11.2022 12:46:15 ******/
+/****** Object:  Table [TypeList].[Severity]    Script Date: 02.11.2022 12:54:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
