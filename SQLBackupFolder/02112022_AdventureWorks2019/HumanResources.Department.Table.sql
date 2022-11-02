@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[Department]    Script Date: 02.11.2022 13:44:09 ******/
+/****** Object:  Table [HumanResources].[Department]    Script Date: 02.11.2022 13:44:48 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18,7 +18,7 @@ CREATE TABLE [HumanResources].[Department](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Department_Name]    Script Date: 02.11.2022 13:44:10 ******/
+/****** Object:  Index [AK_Department_Name]    Script Date: 02.11.2022 13:44:49 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Department_Name] ON [HumanResources].[Department]
 (
 	[Name] ASC
