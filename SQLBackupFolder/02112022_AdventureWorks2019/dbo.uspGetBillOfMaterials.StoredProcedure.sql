@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspGetBillOfMaterials]    Script Date: 02.11.2022 09:12:38 ******/
+/****** Object:  StoredProcedure [dbo].[uspGetBillOfMaterials]    Script Date: 02.11.2022 09:21:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
