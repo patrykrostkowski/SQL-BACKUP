@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[FlaggedType]    Script Date: 02.11.2022 09:09:03 ******/
+/****** Object:  Table [TypeList].[FlaggedType]    Script Date: 02.11.2022 09:12:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
