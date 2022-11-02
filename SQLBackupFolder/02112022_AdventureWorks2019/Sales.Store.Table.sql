@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[Store]    Script Date: 02.11.2022 13:43:13 ******/
+/****** Object:  Table [Sales].[Store]    Script Date: 02.11.2022 13:44:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18,13 +18,13 @@ CREATE TABLE [Sales].[Store](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Store_rowguid]    Script Date: 02.11.2022 13:43:14 ******/
+/****** Object:  Index [AK_Store_rowguid]    Script Date: 02.11.2022 13:44:10 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Store_rowguid] ON [Sales].[Store]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Store_SalesPersonID]    Script Date: 02.11.2022 13:43:14 ******/
+/****** Object:  Index [IX_Store_SalesPersonID]    Script Date: 02.11.2022 13:44:10 ******/
 CREATE NONCLUSTERED INDEX [IX_Store_SalesPersonID] ON [Sales].[Store]
 (
 	[SalesPersonID] ASC
@@ -38,7 +38,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [PXML_Store_Demographics]    Script Date: 02.11.2022 13:43:14 ******/
+/****** Object:  Index [PXML_Store_Demographics]    Script Date: 02.11.2022 13:44:10 ******/
 CREATE PRIMARY XML INDEX [PXML_Store_Demographics] ON [Sales].[Store]
 (
 	[Demographics]
