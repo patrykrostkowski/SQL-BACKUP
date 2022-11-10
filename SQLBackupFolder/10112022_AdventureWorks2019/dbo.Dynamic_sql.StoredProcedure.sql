@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[Dynamic_sql]    Script Date: 10.11.2022 10:38:23 ******/
+/****** Object:  StoredProcedure [dbo].[Dynamic_sql]    Script Date: 10.11.2022 10:39:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
