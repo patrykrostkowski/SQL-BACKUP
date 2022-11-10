@@ -1,6 +1,6 @@
 ﻿USE [Test]
 GO
-/****** Object:  Table [dbo].[PolicyData]    Script Date: 10.11.2022 14:35:11 ******/
+/****** Object:  Table [dbo].[PolicyData]    Script Date: 10.11.2022 14:36:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
