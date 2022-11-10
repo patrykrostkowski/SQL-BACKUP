@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Schema [Sales]    Script Date: 10.11.2022 13:47:37 ******/
+/****** Object:  Schema [Sales]    Script Date: 10.11.2022 13:50:35 ******/
 IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = N'Sales')
 EXEC sys.sp_executesql N'CREATE SCHEMA [Sales]'
 GO

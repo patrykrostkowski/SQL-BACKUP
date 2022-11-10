@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SpecialOfferProduct]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Table [Sales].[SpecialOfferProduct]    Script Date: 10.11.2022 13:50:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,14 +20,14 @@ CREATE TABLE [Sales].[SpecialOfferProduct](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_SpecialOfferProduct_rowguid]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [AK_SpecialOfferProduct_rowguid]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SpecialOfferProduct]') AND name = N'AK_SpecialOfferProduct_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SpecialOfferProduct_rowguid] ON [Sales].[SpecialOfferProduct]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_SpecialOfferProduct_ProductID]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [IX_SpecialOfferProduct_ProductID]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SpecialOfferProduct]') AND name = N'IX_SpecialOfferProduct_ProductID')
 CREATE NONCLUSTERED INDEX [IX_SpecialOfferProduct_ProductID] ON [Sales].[SpecialOfferProduct]
 (

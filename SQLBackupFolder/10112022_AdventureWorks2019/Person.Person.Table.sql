@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[Person]    Script Date: 10.11.2022 13:47:37 ******/
+/****** Object:  Table [Person].[Person]    Script Date: 10.11.2022 13:50:35 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -28,7 +28,7 @@ CREATE TABLE [Person].[Person](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_Person_rowguid]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [AK_Person_rowguid]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'AK_Person_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Person_rowguid] ON [Person].[Person]
 (
@@ -37,7 +37,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Person_rowguid] ON [Person].[Person]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_Person_LastName_FirstName_MiddleName]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [IX_Person_LastName_FirstName_MiddleName]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'IX_Person_LastName_FirstName_MiddleName')
 CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleName] ON [Person].[Person]
 (
@@ -54,7 +54,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [PXML_Person_AddContact]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [PXML_Person_AddContact]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'PXML_Person_AddContact')
 CREATE PRIMARY XML INDEX [PXML_Person_AddContact] ON [Person].[Person]
 (
@@ -69,7 +69,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [PXML_Person_Demographics]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [PXML_Person_Demographics]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'PXML_Person_Demographics')
 CREATE PRIMARY XML INDEX [PXML_Person_Demographics] ON [Person].[Person]
 (
@@ -84,7 +84,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [XMLPATH_Person_Demographics]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [XMLPATH_Person_Demographics]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'XMLPATH_Person_Demographics')
 CREATE XML INDEX [XMLPATH_Person_Demographics] ON [Person].[Person]
 (
@@ -100,7 +100,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [XMLPROPERTY_Person_Demographics]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [XMLPROPERTY_Person_Demographics]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'XMLPROPERTY_Person_Demographics')
 CREATE XML INDEX [XMLPROPERTY_Person_Demographics] ON [Person].[Person]
 (
@@ -116,7 +116,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [XMLVALUE_Person_Demographics]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Index [XMLVALUE_Person_Demographics]    Script Date: 10.11.2022 13:50:36 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Person]') AND name = N'XMLVALUE_Person_Demographics')
 CREATE XML INDEX [XMLVALUE_Person_Demographics] ON [Person].[Person]
 (
@@ -163,7 +163,7 @@ GO
 IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'[Person].[CK_Person_PersonType]') AND parent_object_id = OBJECT_ID(N'[Person].[Person]'))
 ALTER TABLE [Person].[Person] CHECK CONSTRAINT [CK_Person_PersonType]
 GO
-/****** Object:  Trigger [Person].[iuPerson]    Script Date: 10.11.2022 13:47:38 ******/
+/****** Object:  Trigger [Person].[iuPerson]    Script Date: 10.11.2022 13:50:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
