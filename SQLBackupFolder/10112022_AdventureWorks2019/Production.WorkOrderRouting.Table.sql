@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[WorkOrderRouting]    Script Date: 10.11.2022 13:47:16 ******/
+/****** Object:  Table [Production].[WorkOrderRouting]    Script Date: 10.11.2022 13:47:38 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -29,7 +29,7 @@ CREATE TABLE [Production].[WorkOrderRouting](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [IX_WorkOrderRouting_ProductID]    Script Date: 10.11.2022 13:47:16 ******/
+/****** Object:  Index [IX_WorkOrderRouting_ProductID]    Script Date: 10.11.2022 13:47:38 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[WorkOrderRouting]') AND name = N'IX_WorkOrderRouting_ProductID')
 CREATE NONCLUSTERED INDEX [IX_WorkOrderRouting_ProductID] ON [Production].[WorkOrderRouting]
 (
