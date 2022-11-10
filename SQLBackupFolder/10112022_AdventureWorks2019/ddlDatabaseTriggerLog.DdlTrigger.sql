@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  DdlTrigger [ddlDatabaseTriggerLog]    Script Date: 10.11.2022 10:39:20 ******/
+/****** Object:  DdlTrigger [ddlDatabaseTriggerLog]    Script Date: 10.11.2022 10:42:42 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
