@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[Document]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Table [Production].[Document]    Script Date: 10.11.2022 13:46:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -41,7 +41,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [AK_Document_DocumentLevel_DocumentNode]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Index [AK_Document_DocumentLevel_DocumentNode]    Script Date: 10.11.2022 13:46:19 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[Document]') AND name = N'AK_Document_DocumentLevel_DocumentNode')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Document_DocumentLevel_DocumentNode] ON [Production].[Document]
 (
@@ -49,7 +49,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Document_DocumentLevel_DocumentNode] ON [Pr
 	[DocumentNode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Document_rowguid]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Index [AK_Document_rowguid]    Script Date: 10.11.2022 13:46:19 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[Document]') AND name = N'AK_Document_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Document_rowguid] ON [Production].[Document]
 (
@@ -58,7 +58,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Document_rowguid] ON [Production].[Document
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_Document_FileName_Revision]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Index [IX_Document_FileName_Revision]    Script Date: 10.11.2022 13:46:19 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[Document]') AND name = N'IX_Document_FileName_Revision')
 CREATE NONCLUSTERED INDEX [IX_Document_FileName_Revision] ON [Production].[Document]
 (
@@ -66,7 +66,7 @@ CREATE NONCLUSTERED INDEX [IX_Document_FileName_Revision] ON [Production].[Docum
 	[Revision] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  FullTextIndex     Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  FullTextIndex     Script Date: 10.11.2022 13:46:19 ******/
 IF not EXISTS (SELECT * FROM sys.fulltext_indexes fti WHERE fti.object_id = OBJECT_ID(N'[Production].[Document]'))
 CREATE FULLTEXT INDEX ON [Production].[Document]
 KEY INDEX [PK_Document_DocumentNode]ON ([AW2016FullTextCatalog], FILEGROUP [PRIMARY])

@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  View [Person].[vStateProvinceCountryRegion]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  View [Person].[vStateProvinceCountryRegion]    Script Date: 10.11.2022 13:46:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -31,7 +31,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [IX_vStateProvinceCountryRegion]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Index [IX_vStateProvinceCountryRegion]    Script Date: 10.11.2022 13:46:19 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[vStateProvinceCountryRegion]') AND name = N'IX_vStateProvinceCountryRegion')
 CREATE UNIQUE CLUSTERED INDEX [IX_vStateProvinceCountryRegion] ON [Person].[vStateProvinceCountryRegion]
 (

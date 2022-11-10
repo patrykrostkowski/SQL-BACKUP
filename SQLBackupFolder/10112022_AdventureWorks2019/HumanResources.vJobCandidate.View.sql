@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  View [HumanResources].[vJobCandidate]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  View [HumanResources].[vJobCandidate]    Script Date: 10.11.2022 13:46:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

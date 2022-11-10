@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Purchasing].[PurchaseOrderHeader]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Table [Purchasing].[PurchaseOrderHeader]    Script Date: 10.11.2022 13:46:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -28,14 +28,14 @@ CREATE TABLE [Purchasing].[PurchaseOrderHeader](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [IX_PurchaseOrderHeader_EmployeeID]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Index [IX_PurchaseOrderHeader_EmployeeID]    Script Date: 10.11.2022 13:46:19 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Purchasing].[PurchaseOrderHeader]') AND name = N'IX_PurchaseOrderHeader_EmployeeID')
 CREATE NONCLUSTERED INDEX [IX_PurchaseOrderHeader_EmployeeID] ON [Purchasing].[PurchaseOrderHeader]
 (
 	[EmployeeID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_PurchaseOrderHeader_VendorID]    Script Date: 10.11.2022 13:45:24 ******/
+/****** Object:  Index [IX_PurchaseOrderHeader_VendorID]    Script Date: 10.11.2022 13:46:19 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Purchasing].[PurchaseOrderHeader]') AND name = N'IX_PurchaseOrderHeader_VendorID')
 CREATE NONCLUSTERED INDEX [IX_PurchaseOrderHeader_VendorID] ON [Purchasing].[PurchaseOrderHeader]
 (
@@ -128,7 +128,7 @@ GO
 IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'[Purchasing].[CK_PurchaseOrderHeader_TaxAmt]') AND parent_object_id = OBJECT_ID(N'[Purchasing].[PurchaseOrderHeader]'))
 ALTER TABLE [Purchasing].[PurchaseOrderHeader] CHECK CONSTRAINT [CK_PurchaseOrderHeader_TaxAmt]
 GO
-/****** Object:  Trigger [Purchasing].[uPurchaseOrderHeader]    Script Date: 10.11.2022 13:45:25 ******/
+/****** Object:  Trigger [Purchasing].[uPurchaseOrderHeader]    Script Date: 10.11.2022 13:46:20 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
