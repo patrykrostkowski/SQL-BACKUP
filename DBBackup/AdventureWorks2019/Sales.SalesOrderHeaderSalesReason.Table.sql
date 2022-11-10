@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesOrderHeaderSalesReason]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Table [Sales].[SalesOrderHeaderSalesReason]    Script Date: 10.11.2022 14:12:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

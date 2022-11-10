@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesTaxRate]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Table [Sales].[SalesTaxRate]    Script Date: 10.11.2022 14:12:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,14 +22,14 @@ CREATE TABLE [Sales].[SalesTaxRate](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_SalesTaxRate_rowguid]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [AK_SalesTaxRate_rowguid]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesTaxRate]') AND name = N'AK_SalesTaxRate_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesTaxRate_rowguid] ON [Sales].[SalesTaxRate]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_SalesTaxRate_StateProvinceID_TaxType]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [AK_SalesTaxRate_StateProvinceID_TaxType]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesTaxRate]') AND name = N'AK_SalesTaxRate_StateProvinceID_TaxType')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesTaxRate_StateProvinceID_TaxType] ON [Sales].[SalesTaxRate]
 (

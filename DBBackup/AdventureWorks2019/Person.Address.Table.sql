@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[Address]    Script Date: 10.11.2022 14:09:44 ******/
+/****** Object:  Table [Person].[Address]    Script Date: 10.11.2022 14:12:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,7 +24,7 @@ CREATE TABLE [Person].[Address](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_Address_rowguid]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [AK_Address_rowguid]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Address]') AND name = N'AK_Address_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Address_rowguid] ON [Person].[Address]
 (
@@ -33,7 +33,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Address_rowguid] ON [Person].[Address]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Address]') AND name = N'IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode')
 CREATE UNIQUE NONCLUSTERED INDEX [IX_Address_AddressLine1_AddressLine2_City_StateProvinceID_PostalCode] ON [Person].[Address]
 (
@@ -44,7 +44,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [IX_Address_AddressLine1_AddressLine2_City_Stat
 	[PostalCode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Address_StateProvinceID]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [IX_Address_StateProvinceID]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[Address]') AND name = N'IX_Address_StateProvinceID')
 CREATE NONCLUSTERED INDEX [IX_Address_StateProvinceID] ON [Person].[Address]
 (

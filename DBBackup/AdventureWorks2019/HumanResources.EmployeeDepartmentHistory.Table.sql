@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[EmployeeDepartmentHistory]    Script Date: 10.11.2022 14:09:44 ******/
+/****** Object:  Table [HumanResources].[EmployeeDepartmentHistory]    Script Date: 10.11.2022 14:12:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,14 +24,14 @@ CREATE TABLE [HumanResources].[EmployeeDepartmentHistory](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [IX_EmployeeDepartmentHistory_DepartmentID]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [IX_EmployeeDepartmentHistory_DepartmentID]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[EmployeeDepartmentHistory]') AND name = N'IX_EmployeeDepartmentHistory_DepartmentID')
 CREATE NONCLUSTERED INDEX [IX_EmployeeDepartmentHistory_DepartmentID] ON [HumanResources].[EmployeeDepartmentHistory]
 (
 	[DepartmentID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_EmployeeDepartmentHistory_ShiftID]    Script Date: 10.11.2022 14:09:45 ******/
+/****** Object:  Index [IX_EmployeeDepartmentHistory_ShiftID]    Script Date: 10.11.2022 14:12:18 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[EmployeeDepartmentHistory]') AND name = N'IX_EmployeeDepartmentHistory_ShiftID')
 CREATE NONCLUSTERED INDEX [IX_EmployeeDepartmentHistory_ShiftID] ON [HumanResources].[EmployeeDepartmentHistory]
 (
