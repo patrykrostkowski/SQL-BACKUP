@@ -1,0 +1,106 @@
+﻿USE [DataMagnifier]
+GO
+/****** Object:  Table [Policy].[Property]    Script Date: 10.11.2022 14:20:44 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[Policy].[Property]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [Policy].[Property](
+	[PropertySK] [int] IDENTITY(2,1) NOT NULL,
+	[ETLCreateDateTime] [datetime] NOT NULL,
+	[ETLUpdateDateTime] [datetime] NOT NULL,
+	[ETLCreateProcessNum] [int] NOT NULL,
+	[ETLUpdateProcessNum] [int] NULL,
+	[SourceSystemSK] [int] NOT NULL,
+	[SourceCode] [varchar](254) NOT NULL,
+	[ProcessDateTime] [datetime] NOT NULL,
+	[PolicyInsurableObjectSK] [int] NOT NULL,
+	[SequenceNum] [int] NULL,
+	[AddressLine1] [varchar](50) NOT NULL,
+	[AddressLine2] [varchar](50) NULL,
+	[AddressLine3] [varchar](50) NULL,
+	[CityName] [varchar](25) NOT NULL,
+	[CountyName] [varchar](20) NULL,
+	[StateSK] [int] NOT NULL,
+	[TerritoryCode] [varchar](255) NULL,
+	[TerritoryDesc] [varchar](50) NULL,
+	[TaxTerritoryCode] [varchar](20) NULL,
+	[TaxTerritoryDesc] [varchar](50) NULL,
+	[TownCode] [varchar](20) NULL,
+	[TownDesc] [varchar](50) NULL,
+	[CountyCode] [varchar](20) NULL,
+	[CountyDesc] [varchar](50) NULL,
+	[CountrySK] [int] NOT NULL,
+	[PostalCode] [varchar](20) NULL,
+	[IsPrimaryInd] [tinyint] NOT NULL,
+	[IsExcludedInd] [varchar](255) NULL,
+	[ItemValuationTypeCode] [varchar](255) NULL,
+	[ItemValuationAmt] [decimal](18, 10) NULL,
+	[PropertyClassCode] [varchar](255) NULL,
+	[PropertyClassDesc] [varchar](255) NULL,
+	[PropertySubClassCode] [varchar](255) NULL,
+	[ProtectionClassCode] [varchar](20) NULL,
+	[ProtectionClassDesc] [varchar](255) NULL,
+	[ProtectionDeviceSprinklerCode] [varchar](20) NULL,
+	[ProtectionDeviceSprinklerDesc] [varchar](255) NULL,
+	[ConstTypeCode] [varchar](20) NULL,
+	[ConstTypeDesc] [varchar](50) NULL,
+	[ConstSymbolCode] [varchar](20) NULL,
+	[ConstSymbolDesc] [varchar](50) NULL,
+	[EarthquakeCode] [varchar](20) NULL,
+	[EarthquakeDesc] [varchar](50) NULL,
+	[DistancetoWaterCode] [varchar](20) NULL,
+	[DistanceToWaterDesc] [varchar](50) NULL,
+	[ValuationTypeCode] [varchar](20) NULL,
+	[ValuationTypeDesc] [varchar](255) NULL,
+	[IsMinimumPremiumInd] [tinyint] NULL,
+	[ManufacturerCode] [varchar](20) NULL,
+	[ManufacturerDesc] [varchar](255) NULL,
+	[ManufactureMethodCode] [varchar](255) NULL,
+	[ManufactureMethodDesc] [varchar](255) NULL,
+	[ModelCode] [varchar](20) NULL,
+	[ModelDesc] [varchar](255) NULL,
+	[CertifyingEntityCode] [varchar](255) NULL,
+	[SerialIdNumber] [varchar](255) NULL,
+	[ConstYear] [varchar](4) NULL,
+	[MilesFireStation] [decimal](19, 4) NULL,
+	[NumOfBldgs] [int] NULL,
+	[LatitudeId] [decimal](9, 6) NULL,
+	[LongitudeId] [decimal](9, 6) NULL,
+ CONSTRAINT [PK_Property] PRIMARY KEY CLUSTERED 
+(
+	[PropertySK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_CountrySK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property]  WITH CHECK ADD  CONSTRAINT [FK_CountrySK_Property] FOREIGN KEY([CountrySK])
+REFERENCES [TypeList].[Country] ([CountrySK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_CountrySK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property] CHECK CONSTRAINT [FK_CountrySK_Property]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_PolicyInsurableObjectSK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property]  WITH CHECK ADD  CONSTRAINT [FK_PolicyInsurableObjectSK_Property] FOREIGN KEY([PolicyInsurableObjectSK])
+REFERENCES [Policy].[PolicyInsurableObject] ([PolicyInsurableObjectSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_PolicyInsurableObjectSK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property] CHECK CONSTRAINT [FK_PolicyInsurableObjectSK_Property]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_SourceSystemSK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property]  WITH CHECK ADD  CONSTRAINT [FK_SourceSystemSK_Property] FOREIGN KEY([SourceSystemSK])
+REFERENCES [TypeList].[SourceSystem] ([SourceSystemSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_SourceSystemSK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property] CHECK CONSTRAINT [FK_SourceSystemSK_Property]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_StateSK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property]  WITH CHECK ADD  CONSTRAINT [FK_StateSK_Property] FOREIGN KEY([StateSK])
+REFERENCES [TypeList].[State] ([StateSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Policy].[FK_StateSK_Property]') AND parent_object_id = OBJECT_ID(N'[Policy].[Property]'))
+ALTER TABLE [Policy].[Property] CHECK CONSTRAINT [FK_StateSK_Property]
+GO
