@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[BillOfMaterials]    Script Date: 10.11.2022 14:34:48 ******/
+/****** Object:  Table [Production].[BillOfMaterials]    Script Date: 10.11.2022 14:35:42 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,7 +24,7 @@ CREATE TABLE [Production].[BillOfMaterials](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate]    Script Date: 10.11.2022 14:34:48 ******/
+/****** Object:  Index [AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate]    Script Date: 10.11.2022 14:35:42 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[BillOfMaterials]') AND name = N'AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate')
 CREATE UNIQUE CLUSTERED INDEX [AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate] ON [Production].[BillOfMaterials]
 (
@@ -35,7 +35,7 @@ CREATE UNIQUE CLUSTERED INDEX [AK_BillOfMaterials_ProductAssemblyID_ComponentID_
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_BillOfMaterials_UnitMeasureCode]    Script Date: 10.11.2022 14:34:48 ******/
+/****** Object:  Index [IX_BillOfMaterials_UnitMeasureCode]    Script Date: 10.11.2022 14:35:43 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[BillOfMaterials]') AND name = N'IX_BillOfMaterials_UnitMeasureCode')
 CREATE NONCLUSTERED INDEX [IX_BillOfMaterials_UnitMeasureCode] ON [Production].[BillOfMaterials]
 (
