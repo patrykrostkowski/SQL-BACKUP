@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [CustomerWarehouse]    Script Date: 10.11.2022 14:35:52 ******/
+/****** Object:  Database [CustomerWarehouse]    Script Date: 10.11.2022 14:43:24 ******/
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'CustomerWarehouse')
 BEGIN
 CREATE DATABASE [CustomerWarehouse]

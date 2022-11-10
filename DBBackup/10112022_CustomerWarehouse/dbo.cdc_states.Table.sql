@@ -1,6 +1,6 @@
 ﻿USE [CustomerWarehouse]
 GO
-/****** Object:  Table [dbo].[cdc_states]    Script Date: 10.11.2022 14:35:52 ******/
+/****** Object:  Table [dbo].[cdc_states]    Script Date: 10.11.2022 14:43:24 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -15,7 +15,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [cdc_states_name]    Script Date: 10.11.2022 14:35:52 ******/
+/****** Object:  Index [cdc_states_name]    Script Date: 10.11.2022 14:43:25 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[cdc_states]') AND name = N'cdc_states_name')
 CREATE UNIQUE NONCLUSTERED INDEX [cdc_states_name] ON [dbo].[cdc_states]
 (
