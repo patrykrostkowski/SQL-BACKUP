@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[ScrapReason]    Script Date: 10.11.2022 14:43:14 ******/
+/****** Object:  Table [Production].[ScrapReason]    Script Date: 10.11.2022 14:46:48 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_ScrapReason_Name]    Script Date: 10.11.2022 14:43:15 ******/
+/****** Object:  Index [AK_ScrapReason_Name]    Script Date: 10.11.2022 14:46:48 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[ScrapReason]') AND name = N'AK_ScrapReason_Name')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_ScrapReason_Name] ON [Production].[ScrapReason]
 (
