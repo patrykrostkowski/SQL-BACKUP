@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Policy].[DriverLicenseDetail]    Script Date: 10.11.2022 14:35:02 ******/
+/****** Object:  Table [Policy].[DriverLicenseDetail]    Script Date: 10.11.2022 14:36:03 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
