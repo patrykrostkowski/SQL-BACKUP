@@ -1,9 +1,14 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspLogError]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  StoredProcedure [dbo].[uspLogError]    Script Date: 10.11.2022 14:09:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[uspLogError]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[uspLogError] AS' 
+END
 GO
 
 -- uspLogError logs error information in the ErrorLog table about the 
@@ -11,7 +16,7 @@ GO
 -- TRY...CATCH construct. This should be executed from within the scope 
 -- of a CATCH block otherwise it will return without inserting error 
 -- information. 
-CREATE PROCEDURE [dbo].[uspLogError] 
+ALTER PROCEDURE [dbo].[uspLogError] 
     @ErrorLogID [int] = 0 OUTPUT -- contains the ErrorLogID of the row inserted
 AS                               -- by uspLogError in the ErrorLog table
 BEGIN
@@ -67,7 +72,9 @@ BEGIN
     END CATCH
 END;
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspLogError', NULL,NULL))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Logs error information in the ErrorLog table about the error that caused execution to jump to the CATCH block of a TRY...CATCH construct. Should be executed from within the scope of a CATCH block otherwise it will return without inserting error information.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspLogError'
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspLogError', N'PARAMETER',N'@ErrorLogID'))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Output parameter for the stored procedure uspLogError. Contains the ErrorLogID value corresponding to the row inserted by uspLogError in the ErrorLog table.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspLogError', @level2type=N'PARAMETER',@level2name=N'@ErrorLogID'
 GO

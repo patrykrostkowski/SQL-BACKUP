@@ -1,12 +1,17 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[Dynamic_sql_match]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  StoredProcedure [dbo].[Dynamic_sql_match]    Script Date: 10.11.2022 14:09:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Dynamic_sql_match]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[Dynamic_sql_match] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[Dynamic_sql_match] (@NameToSearch VARCHAR(20), @SearchPattern VARCHAR(20), @MatchType INT)
+ALTER PROCEDURE [dbo].[Dynamic_sql_match] (@NameToSearch VARCHAR(20), @SearchPattern VARCHAR(20), @MatchType INT)
 AS
 BEGIN
 

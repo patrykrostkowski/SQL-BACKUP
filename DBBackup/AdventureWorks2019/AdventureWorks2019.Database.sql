@@ -1,12 +1,15 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [AdventureWorks2019]    Script Date: 10.11.2022 14:03:46 ******/
+/****** Object:  Database [AdventureWorks2019]    Script Date: 10.11.2022 14:09:44 ******/
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'AdventureWorks2019')
+BEGIN
 CREATE DATABASE [AdventureWorks2019]
  CONTAINMENT = NONE
  ON  PRIMARY 
 ( NAME = N'AdventureWorks2017', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019.mdf' , SIZE = 270336KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
 ( NAME = N'AdventureWorks2017_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\AdventureWorks2019_log.ldf' , SIZE = 73728KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+END
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
@@ -133,6 +136,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = OFF;
 GO
 USE [AdventureWorks2019]
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , NULL,NULL, NULL,NULL, NULL,NULL))
 EXEC [AdventureWorks2019].sys.sp_addextendedproperty @name=N'MS_Description', @value=N'AdventureWorks 2016 Sample OLTP Database' 
 GO
 USE [master]

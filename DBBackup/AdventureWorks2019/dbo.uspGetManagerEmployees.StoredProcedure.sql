@@ -1,12 +1,17 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspGetManagerEmployees]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  StoredProcedure [dbo].[uspGetManagerEmployees]    Script Date: 10.11.2022 14:09:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[uspGetManagerEmployees]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[uspGetManagerEmployees] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[uspGetManagerEmployees]
+ALTER PROCEDURE [dbo].[uspGetManagerEmployees]
     @BusinessEntityID [int]
 AS
 BEGIN
@@ -40,7 +45,9 @@ BEGIN
     OPTION (MAXRECURSION 25) 
 END;
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetManagerEmployees', NULL,NULL))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Stored procedure using a recursive query to return the direct and indirect employees of the specified manager.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspGetManagerEmployees'
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetManagerEmployees', N'PARAMETER',N'@BusinessEntityID'))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Input parameter for the stored procedure uspGetManagerEmployees. Enter a valid BusinessEntityID of the manager from the HumanResources.Employee table.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspGetManagerEmployees', @level2type=N'PARAMETER',@level2name=N'@BusinessEntityID'
 GO

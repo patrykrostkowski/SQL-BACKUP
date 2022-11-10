@@ -1,12 +1,17 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspGetBillOfMaterials]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  StoredProcedure [dbo].[uspGetBillOfMaterials]    Script Date: 10.11.2022 14:09:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[uspGetBillOfMaterials]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[uspGetBillOfMaterials] AS' 
+END
+GO
 
-CREATE PROCEDURE [dbo].[uspGetBillOfMaterials]
+ALTER PROCEDURE [dbo].[uspGetBillOfMaterials]
     @StartProductID [int],
     @CheckDate [datetime]
 AS
@@ -43,9 +48,12 @@ BEGIN
     OPTION (MAXRECURSION 25) 
 END;
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetBillOfMaterials', NULL,NULL))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Stored procedure using a recursive query to return a multi-level bill of material for the specified ProductID.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspGetBillOfMaterials'
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetBillOfMaterials', N'PARAMETER',N'@StartProductID'))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Input parameter for the stored procedure uspGetBillOfMaterials. Enter a valid ProductID from the Production.Product table.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspGetBillOfMaterials', @level2type=N'PARAMETER',@level2name=N'@StartProductID'
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'dbo', N'PROCEDURE',N'uspGetBillOfMaterials', N'PARAMETER',N'@CheckDate'))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Input parameter for the stored procedure uspGetBillOfMaterials used to eliminate components not used after that date. Enter a valid date.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'PROCEDURE',@level1name=N'uspGetBillOfMaterials', @level2type=N'PARAMETER',@level2name=N'@CheckDate'
 GO

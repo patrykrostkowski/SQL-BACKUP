@@ -1,14 +1,19 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspSearchCandidateResumes]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  StoredProcedure [dbo].[uspSearchCandidateResumes]    Script Date: 10.11.2022 14:09:45 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[uspSearchCandidateResumes]') AND type in (N'P', N'PC'))
+BEGIN
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[uspSearchCandidateResumes] AS' 
+END
+GO
 
 --A stored procedure which demonstrates integrated full text search
 
-CREATE PROCEDURE [dbo].[uspSearchCandidateResumes]
+ALTER PROCEDURE [dbo].[uspSearchCandidateResumes]
     @searchString [nvarchar](1000),   
     @useInflectional [bit]=0,
     @useThesaurus [bit]=0,

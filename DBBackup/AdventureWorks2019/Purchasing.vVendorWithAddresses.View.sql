@@ -1,11 +1,12 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  View [Purchasing].[vVendorWithAddresses]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  View [Purchasing].[vVendorWithAddresses]    Script Date: 10.11.2022 14:09:44 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[Purchasing].[vVendorWithAddresses]'))
+EXEC dbo.sp_executesql @statement = N'
 CREATE VIEW [Purchasing].[vVendorWithAddresses] AS 
 SELECT 
     v.[BusinessEntityID]
@@ -28,6 +29,8 @@ FROM [Purchasing].[Vendor] v
     ON cr.[CountryRegionCode] = sp.[CountryRegionCode]
     INNER JOIN [Person].[AddressType] at 
     ON at.[AddressTypeID] = bea.[AddressTypeID];
+' 
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Purchasing', N'VIEW',N'vVendorWithAddresses', NULL,NULL))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Vendor (company) names and addresses .' , @level0type=N'SCHEMA',@level0name=N'Purchasing', @level1type=N'VIEW',@level1name=N'vVendorWithAddresses'
 GO

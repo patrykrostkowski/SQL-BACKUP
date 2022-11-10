@@ -1,11 +1,12 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  View [Sales].[vIndividualCustomer]    Script Date: 10.11.2022 14:03:47 ******/
+/****** Object:  View [Sales].[vIndividualCustomer]    Script Date: 10.11.2022 14:09:44 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
+IF NOT EXISTS (SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'[Sales].[vIndividualCustomer]'))
+EXEC dbo.sp_executesql @statement = N'
 CREATE VIEW [Sales].[vIndividualCustomer] 
 AS 
 SELECT 
@@ -47,6 +48,8 @@ FROM [Person].[Person] p
 	LEFT OUTER JOIN [Person].[PhoneNumberType] pnt
 	ON pnt.[PhoneNumberTypeID] = pp.[PhoneNumberTypeID]
 WHERE c.StoreID IS NULL;
+' 
 GO
+IF NOT EXISTS (SELECT * FROM sys.fn_listextendedproperty(N'MS_Description' , N'SCHEMA',N'Sales', N'VIEW',N'vIndividualCustomer', NULL,NULL))
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Individual customers (names and addresses) that purchase Adventure Works Cycles products online.' , @level0type=N'SCHEMA',@level0name=N'Sales', @level1type=N'VIEW',@level1name=N'vIndividualCustomer'
 GO
