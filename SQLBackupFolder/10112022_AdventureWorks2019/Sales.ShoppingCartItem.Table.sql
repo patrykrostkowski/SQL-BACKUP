@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[ShoppingCartItem]    Script Date: 10.11.2022 12:35:31 ******/
+/****** Object:  Table [Sales].[ShoppingCartItem]    Script Date: 10.11.2022 13:21:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ CREATE TABLE [Sales].[ShoppingCartItem](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_ShoppingCartItem_ShoppingCartID_ProductID]    Script Date: 10.11.2022 12:35:31 ******/
+/****** Object:  Index [IX_ShoppingCartItem_ShoppingCartID_ProductID]    Script Date: 10.11.2022 13:21:18 ******/
 CREATE NONCLUSTERED INDEX [IX_ShoppingCartItem_ShoppingCartID_ProductID] ON [Sales].[ShoppingCartItem]
 (
 	[ShoppingCartID] ASC,

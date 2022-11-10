@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspPrintError]    Script Date: 10.11.2022 12:35:31 ******/
+/****** Object:  StoredProcedure [dbo].[uspPrintError]    Script Date: 10.11.2022 13:21:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[Culture]    Script Date: 10.11.2022 12:35:31 ******/
+/****** Object:  Table [Production].[Culture]    Script Date: 10.11.2022 13:21:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17,7 +17,7 @@ CREATE TABLE [Production].[Culture](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Culture_Name]    Script Date: 10.11.2022 12:35:31 ******/
+/****** Object:  Index [AK_Culture_Name]    Script Date: 10.11.2022 13:21:18 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Culture_Name] ON [Production].[Culture]
 (
 	[Name] ASC
