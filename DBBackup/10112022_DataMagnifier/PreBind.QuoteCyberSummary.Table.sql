@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [PreBind].[QuoteCyberSummary]    Script Date: 10.11.2022 14:36:03 ******/
+/****** Object:  Table [PreBind].[QuoteCyberSummary]    Script Date: 10.11.2022 14:43:36 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
