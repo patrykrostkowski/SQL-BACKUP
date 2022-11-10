@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [DataMagnifier]    Script Date: 10.11.2022 14:43:35 ******/
+/****** Object:  Database [DataMagnifier]    Script Date: 10.11.2022 14:47:08 ******/
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'DataMagnifier')
 BEGIN
 CREATE DATABASE [DataMagnifier]

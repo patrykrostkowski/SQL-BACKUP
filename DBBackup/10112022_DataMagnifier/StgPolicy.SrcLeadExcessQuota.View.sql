@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  View [StgPolicy].[SrcLeadExcessQuota]    Script Date: 10.11.2022 14:43:35 ******/
+/****** Object:  View [StgPolicy].[SrcLeadExcessQuota]    Script Date: 10.11.2022 14:47:08 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
