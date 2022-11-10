@@ -1,0 +1,25 @@
+﻿USE [DataMagnifier]
+GO
+/****** Object:  Table [TypeList].[CancellationType]    Script Date: 10.11.2022 12:35:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [TypeList].[CancellationType](
+	[CancellationTypeSK] [int] IDENTITY(2,1) NOT NULL,
+	[ETLCreateDateTime] [datetime] NOT NULL,
+	[ETLUpdateDateTime] [datetime] NOT NULL,
+	[SourceSystemSK] [int] NOT NULL,
+	[CancellationTypeCode] [varchar](20) NOT NULL,
+	[CancellationTypeName] [varchar](50) NOT NULL,
+ CONSTRAINT [PK_CancellationType] PRIMARY KEY CLUSTERED 
+(
+	[CancellationTypeSK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [TypeList].[CancellationType]  WITH CHECK ADD  CONSTRAINT [FK_SourceSystemSK_CancellationType] FOREIGN KEY([SourceSystemSK])
+REFERENCES [TypeList].[SourceSystem] ([SourceSystemSK])
+GO
+ALTER TABLE [TypeList].[CancellationType] CHECK CONSTRAINT [FK_SourceSystemSK_CancellationType]
+GO
