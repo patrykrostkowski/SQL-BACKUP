@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[ProductCategory]    Script Date: 10.11.2022 14:35:42 ******/
+/****** Object:  Table [Production].[ProductCategory]    Script Date: 10.11.2022 14:43:14 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,14 +21,14 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_ProductCategory_Name]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [AK_ProductCategory_Name]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[ProductCategory]') AND name = N'AK_ProductCategory_Name')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_ProductCategory_Name] ON [Production].[ProductCategory]
 (
 	[Name] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_ProductCategory_rowguid]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [AK_ProductCategory_rowguid]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[ProductCategory]') AND name = N'AK_ProductCategory_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_ProductCategory_rowguid] ON [Production].[ProductCategory]
 (

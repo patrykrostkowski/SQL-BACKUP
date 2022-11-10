@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[ContactType]    Script Date: 10.11.2022 14:35:42 ******/
+/****** Object:  Table [Person].[ContactType]    Script Date: 10.11.2022 14:43:14 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_ContactType_Name]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [AK_ContactType_Name]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[ContactType]') AND name = N'AK_ContactType_Name')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_ContactType_Name] ON [Person].[ContactType]
 (

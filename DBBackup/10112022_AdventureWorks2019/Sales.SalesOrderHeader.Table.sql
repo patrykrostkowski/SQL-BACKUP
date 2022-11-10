@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesOrderHeader]    Script Date: 10.11.2022 14:35:42 ******/
+/****** Object:  Table [Sales].[SalesOrderHeader]    Script Date: 10.11.2022 14:43:14 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -41,7 +41,7 @@ CREATE TABLE [Sales].[SalesOrderHeader](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_SalesOrderHeader_rowguid]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [AK_SalesOrderHeader_rowguid]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesOrderHeader]') AND name = N'AK_SalesOrderHeader_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesOrderHeader_rowguid] ON [Sales].[SalesOrderHeader]
 (
@@ -56,21 +56,21 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [AK_SalesOrderHeader_SalesOrderNumber]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [AK_SalesOrderHeader_SalesOrderNumber]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesOrderHeader]') AND name = N'AK_SalesOrderHeader_SalesOrderNumber')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesOrderHeader_SalesOrderNumber] ON [Sales].[SalesOrderHeader]
 (
 	[SalesOrderNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_SalesOrderHeader_CustomerID]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [IX_SalesOrderHeader_CustomerID]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesOrderHeader]') AND name = N'IX_SalesOrderHeader_CustomerID')
 CREATE NONCLUSTERED INDEX [IX_SalesOrderHeader_CustomerID] ON [Sales].[SalesOrderHeader]
 (
 	[CustomerID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_SalesOrderHeader_SalesPersonID]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [IX_SalesOrderHeader_SalesPersonID]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesOrderHeader]') AND name = N'IX_SalesOrderHeader_SalesPersonID')
 CREATE NONCLUSTERED INDEX [IX_SalesOrderHeader_SalesPersonID] ON [Sales].[SalesOrderHeader]
 (
@@ -214,7 +214,7 @@ GO
 IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'[Sales].[CK_SalesOrderHeader_TaxAmt]') AND parent_object_id = OBJECT_ID(N'[Sales].[SalesOrderHeader]'))
 ALTER TABLE [Sales].[SalesOrderHeader] CHECK CONSTRAINT [CK_SalesOrderHeader_TaxAmt]
 GO
-/****** Object:  Trigger [Sales].[uSalesOrderHeader]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Trigger [Sales].[uSalesOrderHeader]    Script Date: 10.11.2022 14:43:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

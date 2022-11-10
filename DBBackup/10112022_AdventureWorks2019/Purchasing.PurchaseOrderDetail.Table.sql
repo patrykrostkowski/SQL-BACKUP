@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Purchasing].[PurchaseOrderDetail]    Script Date: 10.11.2022 14:35:42 ******/
+/****** Object:  Table [Purchasing].[PurchaseOrderDetail]    Script Date: 10.11.2022 14:43:14 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -27,7 +27,7 @@ CREATE TABLE [Purchasing].[PurchaseOrderDetail](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [IX_PurchaseOrderDetail_ProductID]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Index [IX_PurchaseOrderDetail_ProductID]    Script Date: 10.11.2022 14:43:15 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Purchasing].[PurchaseOrderDetail]') AND name = N'IX_PurchaseOrderDetail_ProductID')
 CREATE NONCLUSTERED INDEX [IX_PurchaseOrderDetail_ProductID] ON [Purchasing].[PurchaseOrderDetail]
 (
@@ -77,7 +77,7 @@ GO
 IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'[Purchasing].[CK_PurchaseOrderDetail_UnitPrice]') AND parent_object_id = OBJECT_ID(N'[Purchasing].[PurchaseOrderDetail]'))
 ALTER TABLE [Purchasing].[PurchaseOrderDetail] CHECK CONSTRAINT [CK_PurchaseOrderDetail_UnitPrice]
 GO
-/****** Object:  Trigger [Purchasing].[iPurchaseOrderDetail]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Trigger [Purchasing].[iPurchaseOrderDetail]    Script Date: 10.11.2022 14:43:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -142,7 +142,7 @@ END;
 GO
 ALTER TABLE [Purchasing].[PurchaseOrderDetail] ENABLE TRIGGER [iPurchaseOrderDetail]
 GO
-/****** Object:  Trigger [Purchasing].[uPurchaseOrderDetail]    Script Date: 10.11.2022 14:35:43 ******/
+/****** Object:  Trigger [Purchasing].[uPurchaseOrderDetail]    Script Date: 10.11.2022 14:43:15 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
