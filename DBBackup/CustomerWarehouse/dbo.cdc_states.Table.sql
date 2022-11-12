@@ -1,18 +1,22 @@
 ﻿USE [CustomerWarehouse]
 GO
-/****** Object:  Table [dbo].[cdc_states]    Script Date: 12.11.2022 09:46:37 ******/
+/****** Object:  Table [dbo].[cdc_states]    Script Date: 12.11.2022 10:12:07 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[cdc_states]') AND type in (N'U'))
+BEGIN
 CREATE TABLE [dbo].[cdc_states](
 	[name] [nvarchar](256) NOT NULL,
 	[state] [nvarchar](256) NOT NULL
 ) ON [PRIMARY]
+END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [cdc_states_name]    Script Date: 12.11.2022 09:46:37 ******/
+/****** Object:  Index [cdc_states_name]    Script Date: 12.11.2022 10:12:07 ******/
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[dbo].[cdc_states]') AND name = N'cdc_states_name')
 CREATE UNIQUE NONCLUSTERED INDEX [cdc_states_name] ON [dbo].[cdc_states]
 (
 	[name] ASC
