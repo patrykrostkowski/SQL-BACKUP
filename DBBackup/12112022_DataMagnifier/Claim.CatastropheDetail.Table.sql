@@ -1,0 +1,56 @@
+﻿USE [DataMagnifier]
+GO
+/****** Object:  Table [Claim].[CatastropheDetail]    Script Date: 12.11.2022 09:01:17 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [Claim].[CatastropheDetail](
+	[CatastropheDetailSK] [int] IDENTITY(2,1) NOT NULL,
+	[ETLCreateDateTime] [datetime] NOT NULL,
+	[ETLUpdateDateTime] [datetime] NOT NULL,
+	[ETLCreateProcessNum] [int] NOT NULL,
+	[ETLUpdateProcessNum] [int] NULL,
+	[SourceSystemSK] [int] NOT NULL,
+	[SourceCode] [varchar](254) NOT NULL,
+	[ProcessDateTime] [datetime] NOT NULL,
+	[CatastropheSK] [int] NOT NULL,
+	[LossCauseSK] [int] NOT NULL,
+	[LossTypeSK] [int] NOT NULL,
+ CONSTRAINT [PK_CatastropheDetail] PRIMARY KEY CLUSTERED 
+(
+	[CatastropheDetailSK] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_CatastropheSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail]  WITH CHECK ADD  CONSTRAINT [FK_CatastropheSK_CatastropheDetail] FOREIGN KEY([CatastropheSK])
+REFERENCES [Claim].[Catastrophe] ([CatastropheSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_CatastropheSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail] CHECK CONSTRAINT [FK_CatastropheSK_CatastropheDetail]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_LossCauseSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail]  WITH CHECK ADD  CONSTRAINT [FK_LossCauseSK_CatastropheDetail] FOREIGN KEY([LossCauseSK])
+REFERENCES [TypeList].[LossCause] ([LossCauseSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_LossCauseSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail] CHECK CONSTRAINT [FK_LossCauseSK_CatastropheDetail]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_LossTypeSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail]  WITH CHECK ADD  CONSTRAINT [FK_LossTypeSK_CatastropheDetail] FOREIGN KEY([LossTypeSK])
+REFERENCES [TypeList].[LossType] ([LossTypeSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_LossTypeSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail] CHECK CONSTRAINT [FK_LossTypeSK_CatastropheDetail]
+GO
+IF NOT EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_SourceSystemSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail]  WITH CHECK ADD  CONSTRAINT [FK_SourceSystemSK_CatastropheDetail] FOREIGN KEY([SourceSystemSK])
+REFERENCES [TypeList].[SourceSystem] ([SourceSystemSK])
+GO
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[Claim].[FK_SourceSystemSK_CatastropheDetail]') AND parent_object_id = OBJECT_ID(N'[Claim].[CatastropheDetail]'))
+ALTER TABLE [Claim].[CatastropheDetail] CHECK CONSTRAINT [FK_SourceSystemSK_CatastropheDetail]
+GO
