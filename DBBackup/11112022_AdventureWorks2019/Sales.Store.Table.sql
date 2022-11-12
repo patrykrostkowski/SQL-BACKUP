@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[Store]    Script Date: 12.11.2022 09:00:52 ******/
+/****** Object:  Table [Sales].[Store]    Script Date: 12.11.2022 09:13:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,14 +21,14 @@ CREATE TABLE [Sales].[Store](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_Store_rowguid]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [AK_Store_rowguid]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[Store]') AND name = N'AK_Store_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Store_rowguid] ON [Sales].[Store]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Store_SalesPersonID]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [IX_Store_SalesPersonID]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[Store]') AND name = N'IX_Store_SalesPersonID')
 CREATE NONCLUSTERED INDEX [IX_Store_SalesPersonID] ON [Sales].[Store]
 (
@@ -43,7 +43,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [PXML_Store_Demographics]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [PXML_Store_Demographics]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[Store]') AND name = N'PXML_Store_Demographics')
 CREATE PRIMARY XML INDEX [PXML_Store_Demographics] ON [Sales].[Store]
 (

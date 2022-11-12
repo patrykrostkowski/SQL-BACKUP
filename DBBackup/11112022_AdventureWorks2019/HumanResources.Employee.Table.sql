@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[Employee]    Script Date: 12.11.2022 09:00:52 ******/
+/****** Object:  Table [HumanResources].[Employee]    Script Date: 12.11.2022 09:13:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -33,7 +33,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Employee_LoginID]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [AK_Employee_LoginID]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[Employee]') AND name = N'AK_Employee_LoginID')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Employee_LoginID] ON [HumanResources].[Employee]
 (
@@ -42,14 +42,14 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Employee_LoginID] ON [HumanResources].[Empl
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Employee_NationalIDNumber]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [AK_Employee_NationalIDNumber]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[Employee]') AND name = N'AK_Employee_NationalIDNumber')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Employee_NationalIDNumber] ON [HumanResources].[Employee]
 (
 	[NationalIDNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Employee_rowguid]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [AK_Employee_rowguid]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[Employee]') AND name = N'AK_Employee_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Employee_rowguid] ON [HumanResources].[Employee]
 (
@@ -64,7 +64,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [IX_Employee_OrganizationLevel_OrganizationNode]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [IX_Employee_OrganizationLevel_OrganizationNode]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[Employee]') AND name = N'IX_Employee_OrganizationLevel_OrganizationNode')
 CREATE NONCLUSTERED INDEX [IX_Employee_OrganizationLevel_OrganizationNode] ON [HumanResources].[Employee]
 (
@@ -72,7 +72,7 @@ CREATE NONCLUSTERED INDEX [IX_Employee_OrganizationLevel_OrganizationNode] ON [H
 	[OrganizationNode] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_Employee_OrganizationNode]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [IX_Employee_OrganizationNode]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[HumanResources].[Employee]') AND name = N'IX_Employee_OrganizationNode')
 CREATE NONCLUSTERED INDEX [IX_Employee_OrganizationNode] ON [HumanResources].[Employee]
 (
@@ -152,7 +152,7 @@ GO
 IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'[HumanResources].[CK_Employee_VacationHours]') AND parent_object_id = OBJECT_ID(N'[HumanResources].[Employee]'))
 ALTER TABLE [HumanResources].[Employee] CHECK CONSTRAINT [CK_Employee_VacationHours]
 GO
-/****** Object:  Trigger [HumanResources].[dEmployee]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Trigger [HumanResources].[dEmployee]    Script Date: 12.11.2022 09:13:52 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

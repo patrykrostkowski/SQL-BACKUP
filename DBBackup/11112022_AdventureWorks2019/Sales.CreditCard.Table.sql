@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[CreditCard]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Table [Sales].[CreditCard]    Script Date: 12.11.2022 09:13:51 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -23,7 +23,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_CreditCard_CardNumber]    Script Date: 12.11.2022 09:00:53 ******/
+/****** Object:  Index [AK_CreditCard_CardNumber]    Script Date: 12.11.2022 09:13:52 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[CreditCard]') AND name = N'AK_CreditCard_CardNumber')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_CreditCard_CardNumber] ON [Sales].[CreditCard]
 (
