@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[WorkOrder]    Script Date: 12.11.2022 10:11:56 ******/
+/****** Object:  Table [Production].[WorkOrder]    Script Date: 14.11.2022 12:02:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -25,14 +25,14 @@ CREATE TABLE [Production].[WorkOrder](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [IX_WorkOrder_ProductID]    Script Date: 12.11.2022 10:11:56 ******/
+/****** Object:  Index [IX_WorkOrder_ProductID]    Script Date: 14.11.2022 12:02:49 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[WorkOrder]') AND name = N'IX_WorkOrder_ProductID')
 CREATE NONCLUSTERED INDEX [IX_WorkOrder_ProductID] ON [Production].[WorkOrder]
 (
 	[ProductID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_WorkOrder_ScrapReasonID]    Script Date: 12.11.2022 10:11:56 ******/
+/****** Object:  Index [IX_WorkOrder_ScrapReasonID]    Script Date: 14.11.2022 12:02:49 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[WorkOrder]') AND name = N'IX_WorkOrder_ScrapReasonID')
 CREATE NONCLUSTERED INDEX [IX_WorkOrder_ScrapReasonID] ON [Production].[WorkOrder]
 (
@@ -76,7 +76,7 @@ GO
 IF  EXISTS (SELECT * FROM sys.check_constraints WHERE object_id = OBJECT_ID(N'[Production].[CK_WorkOrder_ScrappedQty]') AND parent_object_id = OBJECT_ID(N'[Production].[WorkOrder]'))
 ALTER TABLE [Production].[WorkOrder] CHECK CONSTRAINT [CK_WorkOrder_ScrappedQty]
 GO
-/****** Object:  Trigger [Production].[iWorkOrder]    Script Date: 12.11.2022 10:11:56 ******/
+/****** Object:  Trigger [Production].[iWorkOrder]    Script Date: 14.11.2022 12:02:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,7 +128,7 @@ END;
 GO
 ALTER TABLE [Production].[WorkOrder] ENABLE TRIGGER [iWorkOrder]
 GO
-/****** Object:  Trigger [Production].[uWorkOrder]    Script Date: 12.11.2022 10:11:56 ******/
+/****** Object:  Trigger [Production].[uWorkOrder]    Script Date: 14.11.2022 12:02:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
