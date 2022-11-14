@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[TransactionHistoryArchive]    Script Date: 14.11.2022 12:04:04 ******/
+/****** Object:  Table [Production].[TransactionHistoryArchive]    Script Date: 14.11.2022 12:05:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,14 +24,14 @@ CREATE TABLE [Production].[TransactionHistoryArchive](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [IX_TransactionHistoryArchive_ProductID]    Script Date: 14.11.2022 12:04:04 ******/
+/****** Object:  Index [IX_TransactionHistoryArchive_ProductID]    Script Date: 14.11.2022 12:05:17 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[TransactionHistoryArchive]') AND name = N'IX_TransactionHistoryArchive_ProductID')
 CREATE NONCLUSTERED INDEX [IX_TransactionHistoryArchive_ProductID] ON [Production].[TransactionHistoryArchive]
 (
 	[ProductID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID]    Script Date: 14.11.2022 12:04:04 ******/
+/****** Object:  Index [IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID]    Script Date: 14.11.2022 12:05:17 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[TransactionHistoryArchive]') AND name = N'IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID')
 CREATE NONCLUSTERED INDEX [IX_TransactionHistoryArchive_ReferenceOrderID_ReferenceOrderLineID] ON [Production].[TransactionHistoryArchive]
 (

@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[Location]    Script Date: 14.11.2022 12:04:04 ******/
+/****** Object:  Table [Production].[Location]    Script Date: 14.11.2022 12:05:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,7 +22,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Location_Name]    Script Date: 14.11.2022 12:04:04 ******/
+/****** Object:  Index [AK_Location_Name]    Script Date: 14.11.2022 12:05:17 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[Location]') AND name = N'AK_Location_Name')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Location_Name] ON [Production].[Location]
 (

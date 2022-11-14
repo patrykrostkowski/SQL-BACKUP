@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesPersonQuotaHistory]    Script Date: 14.11.2022 12:04:04 ******/
+/****** Object:  Table [Sales].[SalesPersonQuotaHistory]    Script Date: 14.11.2022 12:05:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,7 +21,7 @@ CREATE TABLE [Sales].[SalesPersonQuotaHistory](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_SalesPersonQuotaHistory_rowguid]    Script Date: 14.11.2022 12:04:05 ******/
+/****** Object:  Index [AK_SalesPersonQuotaHistory_rowguid]    Script Date: 14.11.2022 12:05:17 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Sales].[SalesPersonQuotaHistory]') AND name = N'AK_SalesPersonQuotaHistory_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesPersonQuotaHistory_rowguid] ON [Sales].[SalesPersonQuotaHistory]
 (
