@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[UnitMeasure]    Script Date: 14.11.2022 12:05:17 ******/
+/****** Object:  Table [Production].[UnitMeasure]    Script Date: 14.11.2022 12:05:29 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ END
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_UnitMeasure_Name]    Script Date: 14.11.2022 12:05:17 ******/
+/****** Object:  Index [AK_UnitMeasure_Name]    Script Date: 14.11.2022 12:05:29 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Production].[UnitMeasure]') AND name = N'AK_UnitMeasure_Name')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_UnitMeasure_Name] ON [Production].[UnitMeasure]
 (

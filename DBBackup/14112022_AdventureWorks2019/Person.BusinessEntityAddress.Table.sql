@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[BusinessEntityAddress]    Script Date: 14.11.2022 12:05:17 ******/
+/****** Object:  Table [Person].[BusinessEntityAddress]    Script Date: 14.11.2022 12:05:28 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,21 +22,21 @@ CREATE TABLE [Person].[BusinessEntityAddress](
 ) ON [PRIMARY]
 END
 GO
-/****** Object:  Index [AK_BusinessEntityAddress_rowguid]    Script Date: 14.11.2022 12:05:17 ******/
+/****** Object:  Index [AK_BusinessEntityAddress_rowguid]    Script Date: 14.11.2022 12:05:29 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[BusinessEntityAddress]') AND name = N'AK_BusinessEntityAddress_rowguid')
 CREATE UNIQUE NONCLUSTERED INDEX [AK_BusinessEntityAddress_rowguid] ON [Person].[BusinessEntityAddress]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BusinessEntityAddress_AddressID]    Script Date: 14.11.2022 12:05:17 ******/
+/****** Object:  Index [IX_BusinessEntityAddress_AddressID]    Script Date: 14.11.2022 12:05:29 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[BusinessEntityAddress]') AND name = N'IX_BusinessEntityAddress_AddressID')
 CREATE NONCLUSTERED INDEX [IX_BusinessEntityAddress_AddressID] ON [Person].[BusinessEntityAddress]
 (
 	[AddressID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_BusinessEntityAddress_AddressTypeID]    Script Date: 14.11.2022 12:05:17 ******/
+/****** Object:  Index [IX_BusinessEntityAddress_AddressTypeID]    Script Date: 14.11.2022 12:05:29 ******/
 IF NOT EXISTS (SELECT * FROM sys.indexes WHERE object_id = OBJECT_ID(N'[Person].[BusinessEntityAddress]') AND name = N'IX_BusinessEntityAddress_AddressTypeID')
 CREATE NONCLUSTERED INDEX [IX_BusinessEntityAddress_AddressTypeID] ON [Person].[BusinessEntityAddress]
 (
