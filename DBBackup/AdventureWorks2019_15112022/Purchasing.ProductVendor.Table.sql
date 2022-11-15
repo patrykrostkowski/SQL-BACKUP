@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Purchasing].[ProductVendor]    Script Date: 15.11.2022 17:25:04 ******/
+/****** Object:  Table [Purchasing].[ProductVendor]    Script Date: 15.11.2022 17:27:41 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,7 +24,7 @@ CREATE TABLE [Purchasing].[ProductVendor](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_ProductVendor_BusinessEntityID]    Script Date: 15.11.2022 17:25:04 ******/
+/****** Object:  Index [IX_ProductVendor_BusinessEntityID]    Script Date: 15.11.2022 17:27:41 ******/
 CREATE NONCLUSTERED INDEX [IX_ProductVendor_BusinessEntityID] ON [Purchasing].[ProductVendor]
 (
 	[BusinessEntityID] ASC
@@ -32,7 +32,7 @@ CREATE NONCLUSTERED INDEX [IX_ProductVendor_BusinessEntityID] ON [Purchasing].[P
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_ProductVendor_UnitMeasureCode]    Script Date: 15.11.2022 17:25:04 ******/
+/****** Object:  Index [IX_ProductVendor_UnitMeasureCode]    Script Date: 15.11.2022 17:27:41 ******/
 CREATE NONCLUSTERED INDEX [IX_ProductVendor_UnitMeasureCode] ON [Purchasing].[ProductVendor]
 (
 	[UnitMeasureCode] ASC

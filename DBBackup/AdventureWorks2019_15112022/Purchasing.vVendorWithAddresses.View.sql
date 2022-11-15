@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  View [Purchasing].[vVendorWithAddresses]    Script Date: 15.11.2022 17:25:03 ******/
+/****** Object:  View [Purchasing].[vVendorWithAddresses]    Script Date: 15.11.2022 17:27:41 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
