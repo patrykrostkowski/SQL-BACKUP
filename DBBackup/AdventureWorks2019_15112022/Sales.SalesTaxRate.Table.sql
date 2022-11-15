@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesTaxRate]    Script Date: 15.11.2022 17:20:28 ******/
+/****** Object:  Table [Sales].[SalesTaxRate]    Script Date: 15.11.2022 17:24:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,13 +19,13 @@ CREATE TABLE [Sales].[SalesTaxRate](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_SalesTaxRate_rowguid]    Script Date: 15.11.2022 17:20:28 ******/
+/****** Object:  Index [AK_SalesTaxRate_rowguid]    Script Date: 15.11.2022 17:24:32 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesTaxRate_rowguid] ON [Sales].[SalesTaxRate]
 (
 	[rowguid] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_SalesTaxRate_StateProvinceID_TaxType]    Script Date: 15.11.2022 17:20:28 ******/
+/****** Object:  Index [AK_SalesTaxRate_StateProvinceID_TaxType]    Script Date: 15.11.2022 17:24:32 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesTaxRate_StateProvinceID_TaxType] ON [Sales].[SalesTaxRate]
 (
 	[StateProvinceID] ASC,

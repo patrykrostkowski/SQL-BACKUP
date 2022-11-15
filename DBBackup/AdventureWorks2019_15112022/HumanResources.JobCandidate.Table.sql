@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [HumanResources].[JobCandidate]    Script Date: 15.11.2022 17:20:27 ******/
+/****** Object:  Table [HumanResources].[JobCandidate]    Script Date: 15.11.2022 17:24:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16,13 +16,13 @@ CREATE TABLE [HumanResources].[JobCandidate](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Index [IX_JobCandidate_BusinessEntityID]    Script Date: 15.11.2022 17:20:28 ******/
+/****** Object:  Index [IX_JobCandidate_BusinessEntityID]    Script Date: 15.11.2022 17:24:32 ******/
 CREATE NONCLUSTERED INDEX [IX_JobCandidate_BusinessEntityID] ON [HumanResources].[JobCandidate]
 (
 	[BusinessEntityID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  FullTextIndex     Script Date: 15.11.2022 17:20:28 ******/
+/****** Object:  FullTextIndex     Script Date: 15.11.2022 17:24:32 ******/
 CREATE FULLTEXT INDEX ON [HumanResources].[JobCandidate]
 KEY INDEX [PK_JobCandidate_JobCandidateID]ON ([AW2016FullTextCatalog], FILEGROUP [PRIMARY])
 WITH (CHANGE_TRACKING = AUTO, STOPLIST = SYSTEM)
