@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[TransactionHistory]    Script Date: 15.11.2022 17:33:40 ******/
+/****** Object:  Table [Production].[TransactionHistory]    Script Date: 15.11.2022 17:34:04 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -21,13 +21,13 @@ CREATE TABLE [Production].[TransactionHistory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_TransactionHistory_ProductID]    Script Date: 15.11.2022 17:33:40 ******/
+/****** Object:  Index [IX_TransactionHistory_ProductID]    Script Date: 15.11.2022 17:34:04 ******/
 CREATE NONCLUSTERED INDEX [IX_TransactionHistory_ProductID] ON [Production].[TransactionHistory]
 (
 	[ProductID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_TransactionHistory_ReferenceOrderID_ReferenceOrderLineID]    Script Date: 15.11.2022 17:33:40 ******/
+/****** Object:  Index [IX_TransactionHistory_ReferenceOrderID_ReferenceOrderLineID]    Script Date: 15.11.2022 17:34:04 ******/
 CREATE NONCLUSTERED INDEX [IX_TransactionHistory_ReferenceOrderID_ReferenceOrderLineID] ON [Production].[TransactionHistory]
 (
 	[ReferenceOrderID] ASC,
