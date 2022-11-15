@@ -1,6 +1,6 @@
 ﻿USE [CustomerWarehouse]
 GO
-/****** Object:  Table [dbo].[cdc_states]    Script Date: 15.11.2022 17:20:34 ******/
+/****** Object:  Table [dbo].[cdc_states]    Script Date: 15.11.2022 17:24:40 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[cdc_states](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [cdc_states_name]    Script Date: 15.11.2022 17:20:34 ******/
+/****** Object:  Index [cdc_states_name]    Script Date: 15.11.2022 17:24:40 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [cdc_states_name] ON [dbo].[cdc_states]
 (
 	[name] ASC
