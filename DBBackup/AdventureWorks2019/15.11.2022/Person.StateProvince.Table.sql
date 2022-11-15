@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[StateProvince]    Script Date: 15.11.2022 15:47:44 ******/
+/****** Object:  Table [Person].[StateProvince]    Script Date: 15.11.2022 16:30:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,13 +22,13 @@ CREATE TABLE [Person].[StateProvince](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_StateProvince_Name]    Script Date: 15.11.2022 15:47:45 ******/
+/****** Object:  Index [AK_StateProvince_Name]    Script Date: 15.11.2022 16:30:24 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_StateProvince_Name] ON [Person].[StateProvince]
 (
 	[Name] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_StateProvince_rowguid]    Script Date: 15.11.2022 15:47:45 ******/
+/****** Object:  Index [AK_StateProvince_rowguid]    Script Date: 15.11.2022 16:30:24 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_StateProvince_rowguid] ON [Person].[StateProvince]
 (
 	[rowguid] ASC
@@ -36,7 +36,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_StateProvince_rowguid] ON [Person].[StatePr
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_StateProvince_StateProvinceCode_CountryRegionCode]    Script Date: 15.11.2022 15:47:45 ******/
+/****** Object:  Index [AK_StateProvince_StateProvinceCode_CountryRegionCode]    Script Date: 15.11.2022 16:30:24 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_StateProvince_StateProvinceCode_CountryRegionCode] ON [Person].[StateProvince]
 (
 	[StateProvinceCode] ASC,
