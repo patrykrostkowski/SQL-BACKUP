@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Purchasing].[PurchaseOrderDetail]    Script Date: 15.11.2022 17:04:11 ******/
+/****** Object:  Table [Purchasing].[PurchaseOrderDetail]    Script Date: 15.11.2022 17:17:21 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,7 +24,7 @@ CREATE TABLE [Purchasing].[PurchaseOrderDetail](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_PurchaseOrderDetail_ProductID]    Script Date: 15.11.2022 17:04:11 ******/
+/****** Object:  Index [IX_PurchaseOrderDetail_ProductID]    Script Date: 15.11.2022 17:17:22 ******/
 CREATE NONCLUSTERED INDEX [IX_PurchaseOrderDetail_ProductID] ON [Purchasing].[PurchaseOrderDetail]
 (
 	[ProductID] ASC
@@ -58,7 +58,7 @@ ALTER TABLE [Purchasing].[PurchaseOrderDetail]  WITH CHECK ADD  CONSTRAINT [CK_P
 GO
 ALTER TABLE [Purchasing].[PurchaseOrderDetail] CHECK CONSTRAINT [CK_PurchaseOrderDetail_UnitPrice]
 GO
-/****** Object:  Trigger [Purchasing].[iPurchaseOrderDetail]    Script Date: 15.11.2022 17:04:12 ******/
+/****** Object:  Trigger [Purchasing].[iPurchaseOrderDetail]    Script Date: 15.11.2022 17:17:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +121,7 @@ END;
 GO
 ALTER TABLE [Purchasing].[PurchaseOrderDetail] ENABLE TRIGGER [iPurchaseOrderDetail]
 GO
-/****** Object:  Trigger [Purchasing].[uPurchaseOrderDetail]    Script Date: 15.11.2022 17:04:12 ******/
+/****** Object:  Trigger [Purchasing].[uPurchaseOrderDetail]    Script Date: 15.11.2022 17:17:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
