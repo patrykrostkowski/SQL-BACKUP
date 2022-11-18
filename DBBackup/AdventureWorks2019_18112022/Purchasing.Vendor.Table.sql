@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Purchasing].[Vendor]    Script Date: 18.11.2022 16:35:28 ******/
+/****** Object:  Table [Purchasing].[Vendor]    Script Date: 18.11.2022 16:36:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,7 +22,7 @@ CREATE TABLE [Purchasing].[Vendor](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_Vendor_AccountNumber]    Script Date: 18.11.2022 16:35:29 ******/
+/****** Object:  Index [AK_Vendor_AccountNumber]    Script Date: 18.11.2022 16:37:00 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Vendor_AccountNumber] ON [Purchasing].[Vendor]
 (
 	[AccountNumber] ASC
@@ -43,7 +43,7 @@ ALTER TABLE [Purchasing].[Vendor]  WITH CHECK ADD  CONSTRAINT [CK_Vendor_CreditR
 GO
 ALTER TABLE [Purchasing].[Vendor] CHECK CONSTRAINT [CK_Vendor_CreditRating]
 GO
-/****** Object:  Trigger [Purchasing].[dVendor]    Script Date: 18.11.2022 16:35:29 ******/
+/****** Object:  Trigger [Purchasing].[dVendor]    Script Date: 18.11.2022 16:37:00 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[CountryRegion]    Script Date: 18.11.2022 16:35:28 ******/
+/****** Object:  Table [Person].[CountryRegion]    Script Date: 18.11.2022 16:36:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -17,7 +17,7 @@ CREATE TABLE [Person].[CountryRegion](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_CountryRegion_Name]    Script Date: 18.11.2022 16:35:29 ******/
+/****** Object:  Index [AK_CountryRegion_Name]    Script Date: 18.11.2022 16:37:00 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_CountryRegion_Name] ON [Person].[CountryRegion]
 (
 	[Name] ASC
