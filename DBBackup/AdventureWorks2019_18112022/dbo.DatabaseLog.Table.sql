@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [dbo].[DatabaseLog]    Script Date: 18.11.2022 16:47:53 ******/
+/****** Object:  Table [dbo].[DatabaseLog]    Script Date: 18.11.2022 16:50:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

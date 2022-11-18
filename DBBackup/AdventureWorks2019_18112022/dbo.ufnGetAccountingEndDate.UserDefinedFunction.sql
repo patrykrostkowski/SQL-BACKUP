@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  UserDefinedFunction [dbo].[ufnGetAccountingEndDate]    Script Date: 18.11.2022 16:47:52 ******/
+/****** Object:  UserDefinedFunction [dbo].[ufnGetAccountingEndDate]    Script Date: 18.11.2022 16:50:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
