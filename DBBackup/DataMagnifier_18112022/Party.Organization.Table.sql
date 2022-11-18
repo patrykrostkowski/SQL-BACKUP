@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Party].[Organization]    Script Date: 18.11.2022 16:51:10 ******/
+/****** Object:  Table [Party].[Organization]    Script Date: 18.11.2022 16:54:02 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

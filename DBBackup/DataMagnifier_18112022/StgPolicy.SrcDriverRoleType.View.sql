@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  View [StgPolicy].[SrcDriverRoleType]    Script Date: 18.11.2022 16:51:09 ******/
+/****** Object:  View [StgPolicy].[SrcDriverRoleType]    Script Date: 18.11.2022 16:54:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

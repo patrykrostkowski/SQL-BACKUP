@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Finance].[PolicyTransactionSummary]    Script Date: 18.11.2022 16:51:10 ******/
+/****** Object:  Table [Finance].[PolicyTransactionSummary]    Script Date: 18.11.2022 16:54:01 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
