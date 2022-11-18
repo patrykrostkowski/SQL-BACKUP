@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[Person]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Table [Person].[Person]    Script Date: 18.11.2022 16:16:53 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -25,7 +25,7 @@ CREATE TABLE [Person].[Person](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Index [AK_Person_rowguid]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Index [AK_Person_rowguid]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_Person_rowguid] ON [Person].[Person]
 (
 	[rowguid] ASC
@@ -33,7 +33,7 @@ CREATE UNIQUE NONCLUSTERED INDEX [AK_Person_rowguid] ON [Person].[Person]
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_Person_LastName_FirstName_MiddleName]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Index [IX_Person_LastName_FirstName_MiddleName]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE NONCLUSTERED INDEX [IX_Person_LastName_FirstName_MiddleName] ON [Person].[Person]
 (
 	[LastName] ASC,
@@ -49,7 +49,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [PXML_Person_AddContact]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Index [PXML_Person_AddContact]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE PRIMARY XML INDEX [PXML_Person_AddContact] ON [Person].[Person]
 (
 	[AdditionalContactInfo]
@@ -63,7 +63,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [PXML_Person_Demographics]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Index [PXML_Person_Demographics]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE PRIMARY XML INDEX [PXML_Person_Demographics] ON [Person].[Person]
 (
 	[Demographics]
@@ -77,7 +77,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [XMLPATH_Person_Demographics]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Index [XMLPATH_Person_Demographics]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE XML INDEX [XMLPATH_Person_Demographics] ON [Person].[Person]
 (
 	[Demographics]
@@ -92,7 +92,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [XMLPROPERTY_Person_Demographics]    Script Date: 18.11.2022 16:14:12 ******/
+/****** Object:  Index [XMLPROPERTY_Person_Demographics]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE XML INDEX [XMLPROPERTY_Person_Demographics] ON [Person].[Person]
 (
 	[Demographics]
@@ -107,7 +107,7 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [XMLVALUE_Person_Demographics]    Script Date: 18.11.2022 16:14:13 ******/
+/****** Object:  Index [XMLVALUE_Person_Demographics]    Script Date: 18.11.2022 16:16:54 ******/
 CREATE XML INDEX [XMLVALUE_Person_Demographics] ON [Person].[Person]
 (
 	[Demographics]
@@ -135,7 +135,7 @@ ALTER TABLE [Person].[Person]  WITH CHECK ADD  CONSTRAINT [CK_Person_PersonType]
 GO
 ALTER TABLE [Person].[Person] CHECK CONSTRAINT [CK_Person_PersonType]
 GO
-/****** Object:  Trigger [Person].[iuPerson]    Script Date: 18.11.2022 16:14:13 ******/
+/****** Object:  Trigger [Person].[iuPerson]    Script Date: 18.11.2022 16:16:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
