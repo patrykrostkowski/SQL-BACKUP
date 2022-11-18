@@ -1,6 +1,6 @@
 ﻿USE [CustomerWarehouse]
 GO
-/****** Object:  Table [dbo].[SQlprofilingdata]    Script Date: 18.11.2022 13:53:12 ******/
+/****** Object:  Table [dbo].[SQlprofilingdata]    Script Date: 18.11.2022 14:56:25 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
