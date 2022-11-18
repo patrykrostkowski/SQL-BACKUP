@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Production].[WorkOrder]    Script Date: 18.11.2022 16:11:32 ******/
+/****** Object:  Table [Production].[WorkOrder]    Script Date: 18.11.2022 16:14:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -22,13 +22,13 @@ CREATE TABLE [Production].[WorkOrder](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_WorkOrder_ProductID]    Script Date: 18.11.2022 16:11:33 ******/
+/****** Object:  Index [IX_WorkOrder_ProductID]    Script Date: 18.11.2022 16:14:12 ******/
 CREATE NONCLUSTERED INDEX [IX_WorkOrder_ProductID] ON [Production].[WorkOrder]
 (
 	[ProductID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_WorkOrder_ScrapReasonID]    Script Date: 18.11.2022 16:11:33 ******/
+/****** Object:  Index [IX_WorkOrder_ScrapReasonID]    Script Date: 18.11.2022 16:14:12 ******/
 CREATE NONCLUSTERED INDEX [IX_WorkOrder_ScrapReasonID] ON [Production].[WorkOrder]
 (
 	[ScrapReasonID] ASC
@@ -58,7 +58,7 @@ ALTER TABLE [Production].[WorkOrder]  WITH CHECK ADD  CONSTRAINT [CK_WorkOrder_S
 GO
 ALTER TABLE [Production].[WorkOrder] CHECK CONSTRAINT [CK_WorkOrder_ScrappedQty]
 GO
-/****** Object:  Trigger [Production].[iWorkOrder]    Script Date: 18.11.2022 16:11:33 ******/
+/****** Object:  Trigger [Production].[iWorkOrder]    Script Date: 18.11.2022 16:14:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -108,7 +108,7 @@ END;
 GO
 ALTER TABLE [Production].[WorkOrder] ENABLE TRIGGER [iWorkOrder]
 GO
-/****** Object:  Trigger [Production].[uWorkOrder]    Script Date: 18.11.2022 16:11:33 ******/
+/****** Object:  Trigger [Production].[uWorkOrder]    Script Date: 18.11.2022 16:14:13 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
