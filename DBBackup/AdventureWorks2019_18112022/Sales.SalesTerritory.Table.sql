@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesTerritory]    Script Date: 18.11.2022 16:36:59 ******/
+/****** Object:  Table [Sales].[SalesTerritory]    Script Date: 18.11.2022 16:39:57 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -24,13 +24,13 @@ CREATE TABLE [Sales].[SalesTerritory](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [AK_SalesTerritory_Name]    Script Date: 18.11.2022 16:37:00 ******/
+/****** Object:  Index [AK_SalesTerritory_Name]    Script Date: 18.11.2022 16:39:58 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesTerritory_Name] ON [Sales].[SalesTerritory]
 (
 	[Name] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_SalesTerritory_rowguid]    Script Date: 18.11.2022 16:37:00 ******/
+/****** Object:  Index [AK_SalesTerritory_rowguid]    Script Date: 18.11.2022 16:39:58 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesTerritory_rowguid] ON [Sales].[SalesTerritory]
 (
 	[rowguid] ASC
