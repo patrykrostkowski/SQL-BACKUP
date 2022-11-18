@@ -1,5 +1,5 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  UserDefinedDataType [dbo].[NameStyle]    Script Date: 18.11.2022 16:50:54 ******/
+/****** Object:  UserDefinedDataType [dbo].[NameStyle]    Script Date: 18.11.2022 16:53:43 ******/
 CREATE TYPE [dbo].[NameStyle] FROM [bit] NOT NULL
 GO
