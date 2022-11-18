@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Person].[PersonPhone]    Script Date: 18.11.2022 15:59:24 ******/
+/****** Object:  Table [Person].[PersonPhone]    Script Date: 18.11.2022 16:18:44 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -20,7 +20,7 @@ CREATE TABLE [Person].[PersonPhone](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_PersonPhone_PhoneNumber]    Script Date: 18.11.2022 15:59:25 ******/
+/****** Object:  Index [IX_PersonPhone_PhoneNumber]    Script Date: 18.11.2022 16:18:45 ******/
 CREATE NONCLUSTERED INDEX [IX_PersonPhone_PhoneNumber] ON [Person].[PersonPhone]
 (
 	[PhoneNumber] ASC
