@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  UserDefinedFunction [dbo].[ufnLeadingZeros]    Script Date: 18.11.2022 16:16:54 ******/
+/****** Object:  UserDefinedFunction [dbo].[ufnLeadingZeros]    Script Date: 18.11.2022 16:18:20 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
