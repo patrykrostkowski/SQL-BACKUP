@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [TypeList].[SubrogationClosedOutcome]    Script Date: 18.11.2022 16:48:10 ******/
+/****** Object:  Table [TypeList].[SubrogationClosedOutcome]    Script Date: 18.11.2022 16:51:12 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [dbo].[DIMCalendarDay]    Script Date: 18.11.2022 16:48:07 ******/
+/****** Object:  Table [dbo].[DIMCalendarDay]    Script Date: 18.11.2022 16:51:10 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
