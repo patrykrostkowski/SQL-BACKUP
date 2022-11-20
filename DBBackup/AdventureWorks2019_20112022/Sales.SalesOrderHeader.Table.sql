@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[SalesOrderHeader]    Script Date: 20.11.2022 14:53:01 ******/
+/****** Object:  Table [Sales].[SalesOrderHeader]    Script Date: 20.11.2022 14:54:08 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -38,7 +38,7 @@ CREATE TABLE [Sales].[SalesOrderHeader](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Index [AK_SalesOrderHeader_rowguid]    Script Date: 20.11.2022 14:53:02 ******/
+/****** Object:  Index [AK_SalesOrderHeader_rowguid]    Script Date: 20.11.2022 14:54:09 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesOrderHeader_rowguid] ON [Sales].[SalesOrderHeader]
 (
 	[rowguid] ASC
@@ -52,19 +52,19 @@ SET ANSI_PADDING ON
 SET ANSI_WARNINGS ON
 SET NUMERIC_ROUNDABORT OFF
 GO
-/****** Object:  Index [AK_SalesOrderHeader_SalesOrderNumber]    Script Date: 20.11.2022 14:53:02 ******/
+/****** Object:  Index [AK_SalesOrderHeader_SalesOrderNumber]    Script Date: 20.11.2022 14:54:09 ******/
 CREATE UNIQUE NONCLUSTERED INDEX [AK_SalesOrderHeader_SalesOrderNumber] ON [Sales].[SalesOrderHeader]
 (
 	[SalesOrderNumber] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_SalesOrderHeader_CustomerID]    Script Date: 20.11.2022 14:53:02 ******/
+/****** Object:  Index [IX_SalesOrderHeader_CustomerID]    Script Date: 20.11.2022 14:54:09 ******/
 CREATE NONCLUSTERED INDEX [IX_SalesOrderHeader_CustomerID] ON [Sales].[SalesOrderHeader]
 (
 	[CustomerID] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
-/****** Object:  Index [IX_SalesOrderHeader_SalesPersonID]    Script Date: 20.11.2022 14:53:02 ******/
+/****** Object:  Index [IX_SalesOrderHeader_SalesPersonID]    Script Date: 20.11.2022 14:54:09 ******/
 CREATE NONCLUSTERED INDEX [IX_SalesOrderHeader_SalesPersonID] ON [Sales].[SalesOrderHeader]
 (
 	[SalesPersonID] ASC
@@ -152,7 +152,7 @@ ALTER TABLE [Sales].[SalesOrderHeader]  WITH CHECK ADD  CONSTRAINT [CK_SalesOrde
 GO
 ALTER TABLE [Sales].[SalesOrderHeader] CHECK CONSTRAINT [CK_SalesOrderHeader_TaxAmt]
 GO
-/****** Object:  Trigger [Sales].[uSalesOrderHeader]    Script Date: 20.11.2022 14:53:02 ******/
+/****** Object:  Trigger [Sales].[uSalesOrderHeader]    Script Date: 20.11.2022 14:54:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
