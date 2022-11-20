@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  Table [Sales].[CountryRegionCurrency]    Script Date: 20.11.2022 14:54:09 ******/
+/****** Object:  Table [Sales].[CountryRegionCurrency]    Script Date: 20.11.2022 19:02:07 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -18,7 +18,7 @@ CREATE TABLE [Sales].[CountryRegionCurrency](
 GO
 SET ANSI_PADDING ON
 GO
-/****** Object:  Index [IX_CountryRegionCurrency_CurrencyCode]    Script Date: 20.11.2022 14:54:09 ******/
+/****** Object:  Index [IX_CountryRegionCurrency_CurrencyCode]    Script Date: 20.11.2022 19:02:07 ******/
 CREATE NONCLUSTERED INDEX [IX_CountryRegionCurrency_CurrencyCode] ON [Sales].[CountryRegionCurrency]
 (
 	[CurrencyCode] ASC
