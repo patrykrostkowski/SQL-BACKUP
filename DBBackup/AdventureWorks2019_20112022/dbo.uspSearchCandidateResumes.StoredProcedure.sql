@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspSearchCandidateResumes]    Script Date: 20.11.2022 14:51:14 ******/
+/****** Object:  StoredProcedure [dbo].[uspSearchCandidateResumes]    Script Date: 20.11.2022 14:51:57 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
