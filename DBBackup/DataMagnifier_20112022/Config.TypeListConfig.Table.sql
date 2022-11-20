@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Config].[TypeListConfig]    Script Date: 20.11.2022 14:06:42 ******/
+/****** Object:  Table [Config].[TypeListConfig]    Script Date: 20.11.2022 14:18:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
