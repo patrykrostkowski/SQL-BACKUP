@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [PreBind].[QuoteVehicleRegistration]    Script Date: 20.11.2022 14:18:25 ******/
+/****** Object:  Table [PreBind].[QuoteVehicleRegistration]    Script Date: 20.11.2022 14:54:26 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
