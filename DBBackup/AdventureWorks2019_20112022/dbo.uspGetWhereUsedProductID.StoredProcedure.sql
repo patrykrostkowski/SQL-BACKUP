@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [dbo].[uspGetWhereUsedProductID]    Script Date: 20.11.2022 14:06:27 ******/
+/****** Object:  StoredProcedure [dbo].[uspGetWhereUsedProductID]    Script Date: 20.11.2022 14:18:08 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  UserDefinedFunction [dbo].[ufnGetProductStandardCost]    Script Date: 20.11.2022 14:06:26 ******/
+/****** Object:  UserDefinedFunction [dbo].[ufnGetProductStandardCost]    Script Date: 20.11.2022 14:18:07 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
