@@ -1,6 +1,6 @@
 ﻿USE [AdventureWorks2019]
 GO
-/****** Object:  StoredProcedure [HumanResources].[uspUpdateEmployeeLogin]    Script Date: 20.11.2022 14:18:08 ******/
+/****** Object:  StoredProcedure [HumanResources].[uspUpdateEmployeeLogin]    Script Date: 20.11.2022 14:51:14 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
