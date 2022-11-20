@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [Test]    Script Date: 20.11.2022 14:06:53 ******/
+/****** Object:  Database [Test]    Script Date: 20.11.2022 14:18:34 ******/
 CREATE DATABASE [Test]
  CONTAINMENT = NONE
  ON  PRIMARY 
