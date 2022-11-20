@@ -1,6 +1,6 @@
 ﻿USE [DataMagnifier]
 GO
-/****** Object:  Table [Claim].[Subrogation]    Script Date: 20.11.2022 14:54:24 ******/
+/****** Object:  Table [Claim].[Subrogation]    Script Date: 20.11.2022 19:02:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
